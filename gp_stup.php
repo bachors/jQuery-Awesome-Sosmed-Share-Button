@@ -36,8 +36,15 @@
 	}
 	
 	function share($url){
-		$obj=new shareCount($url);	
-		$arr = array('count' => $obj->get_plusones());
+		$obj=new shareCount($url);		
+		$json=file_get_contents("http://www.stumbleupon.com/services/1.01/badge.getinfo?url=".$url);
+		$result= json_decode($json);
+		if(!empty($result->result->views)){
+			$upon = $result->result->views;
+		}else {
+			$upon = 0;
+		}
+		$arr = array('google' => $obj->get_plusones(),'upon' => $upon);
 		return $arr;
 	}
 	
