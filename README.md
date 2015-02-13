@@ -8,8 +8,8 @@ Awesome Social Media Share Button With Share Count
 
 <h1>Configuration:</h1>
 <pre>
-// Example put URL path google.php on ibacor_share.min.js
-var google_plus = 'http://your-domain.com/google.php';
+// Example put URL path gp_stup.php on ibacor_share.min.js
+var gp_stup = 'http://your-domain.com/gp_stup.php';
 </pre>
 
 <a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a>
