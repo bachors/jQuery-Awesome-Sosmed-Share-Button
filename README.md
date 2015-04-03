@@ -3,6 +3,8 @@ jQuery-Awesome-Sosmed-Share-Button
 
 Awesome Social Media Share Button With Share Count
 
+<h2>Plug and play :)</h2>
+
 <h1>Screenshot:</h1>
 <img src="http://i.imgur.com/K0IZsuv.jpg">
 
