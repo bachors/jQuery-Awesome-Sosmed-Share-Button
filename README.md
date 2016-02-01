@@ -28,4 +28,6 @@ Awesome Social Media Share Button With Share Count
 <h1>Screenshot:</h1>
 <img src="http://i.imgur.com/K0IZsuv.jpg">
 
-<a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a>
+<h3><a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a></h3>
+<h2>This API by iBacor</h2>
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RG95K7HU7AFDS)
