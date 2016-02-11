@@ -1,8 +1,256 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button/ayoshare.js v07 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v10 ####
  * Coded by Ican Bachors 2014.
  * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
  * Updates will be posted to this site.
  *********************************************************************/
 
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$.25.26=1j(h,i,j,k,l,n,o,p,q,r,s){1d b=27(z.A),a=\'\',13=\'\',1k=\'\',6=\'\';5($(1l).14(\'x\')!=1m){a+=$(1l).14(\'x\')}5($(\'1n[1H="1o"]\').14(\'1p\')!=1m){13+=$(\'1n[1H="1o"]\').14(\'1p\')}28 5($(1l).14(\'x\')!=1m){13+=$(1l).14(\'x\')}5($(\'1n[1I="1J:1K"]\').14(\'1p\')!=1m){1k+=$(\'1n[1I="1J:1K"]\').14(\'1p\')}5(15==7){6+=\'<p><a A="B://1f.15.v/1q/1q.1r?u=\'+b+\'" J="K:L M.N(\\\'B://1f.15.v/1q/1q.1r?u=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-15" x="29"><i 8="4 4-15"></i> <w F="1v"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(16==7){6+=\'<p><a A="12://16.v/17?1s=\'+a+\'+-+1t @1u&y=\'+b+\'" J="K:L M.N(\\\'12://16.v/17?1s=\'+a+\'+-+1t @1u&y=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-16" x="2a"><i 8="4 4-16"></i> <w F="1w"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1e==7){6+=\'<p><a A="12://1x.1e.v/17?y=\'+b+\'" J="K:L M.N(\\\'12://1x.1e.v/17?y=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-1e" x="2b+"><i 8="4 4-1e-1x"></i> <w F="1y"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(18==7){6+=\'<p><a A="B://18.v/1L?y=\'+b+\'&x=\'+a+\'+-+1t @1u" J="K:L M.N(\\\'B://18.v/1L?y=\'+b+\'&x=\'+a+\'+-+1t @1u\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-18" x="2c"><i 8="4 4-18"></i> <w F="1z"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(19==7){6+=\'<p><a A="12://1f.19.v/1M?1N=7&y=\'+b+\'&x=\'+a+\'&1O=\'+13+\'" J="K:L M.N(\\\'12://1f.19.v/1M?1N=7&y=\'+b+\'&x=\'+a+\'&1O=\'+13+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-19" x="2d"><i 8="4 4-19"></i> <w F="1A"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1a==7){6+=\'<p><a A="B://1a.v/1P/1Q/1R/?y=\'+b+\'&1S=\'+1k+\'&1o=\'+13+\'" J="K:L M.N(\\\'B://1a.v/1P/1Q/1R/?y=\'+b+\'&1S=\'+1k+\'&1o=\'+13+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-1a" x="2e"><i 8="4 4-1a"></i> <w F="1B"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1b==7){6+=\'<p><a A="B://1f.1b.v/1T/?y=\'+b+\'" J="K:L M.N(\\\'B://1f.1b.v/1T/?y=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-1b" x="2f"><i 8="4 4-1b"></i> <w F="1C"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1g==7){6+=\'<p><a A="12://1g.v/1U?y=\'+b+\'&1s=\'+13+\'" J="K:L M.N(\\\'12://1g.v/1U?y=\'+b+\'&1s=\'+13+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-2g" x="2h"><i 8="4 4-2i"></i> <w F="1D"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1c==7){6+=\'<p><a A="B://1c.v/17.1r?y=\'+b+\'" J="K:L M.N(\\\'B://1c.v/17.1r?y=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-1c" x="2j"><i 8="4 4-1c"></i> <w F="1E"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1h==7){6+=\'<p><a A="12://1V.v/1W?x=\'+a+\'&y=\'+b+\'" J="K:L M.N(\\\'12://1V.v/1W?x=\'+a+\'&y=\'+b+\'\\\',\\\'C.v\\\',\\\'O=P,Q=R,S=0,T=0,z=0,U=1,V=1,W=1,X=0,Y=0\\\');D 10;" 8="11 E-1h" x="2k"><i 8="4 4-2l-1h"></i> <w F="1F"><i 8="4 4-G 4-H"></i></w></a></p>\'}5(1i==7){6+=\'<p><w 8="E-1i" x="\'+2m(\'%2n%1X%1Y%1Z%2o%20%21%2p%20%2q%21%1Y%2r%1X%2s%1Z%2t\')+\'"><i 8="4 4-17-2u"></i> <w F="1G"><i 8="4 4-G 4-H"></i></w></w></p>\'}$(2v).6(6);$.2w({y:\'B://C.v/2x/17-I?y=\'+b,2y:7,2z:\'2A\'}).2B(1j(a){5(15==7){$(\'#1v\').6(m(a.I.15))}5(16==7){$(\'#1w\').6(m(a.I.16))}5(1e==7){$(\'#1y\').6(m(a.I.2C))}5(18==7){$(\'#1z\').6(m(a.I.18))}5(19==7){$(\'#1A\').6(m(a.I.19))}5(1a==7){$(\'#1B\').6(m(a.I.1a))}5(1b==7){$(\'#1C\').6(m(a.I.1b))}5(1g==7){$(\'#1D\').6(m(a.I.1g))}5(1c==7){$(\'#1E\').6(m(a.I.1c))}5(1h==7){$(\'#1F\').6(m(a.I.1h))}5(1i==7){$(\'#1G\').6(m(a.1i))}}).2D(1j(){5(15==7){$(\'#1v\').6(\'0\')}5(16==7){$(\'#1w\').6(\'0\')}5(1e==7){$(\'#1y\').6(\'0\')}5(18==7){$(\'#1z\').6(\'0\')}5(19==7){$(\'#1A\').6(\'0\')}5(1a==7){$(\'#1B\').6(\'0\')}5(1b==7){$(\'#1C\').6(\'0\')}5(1g==7){$(\'#1D\').6(\'0\')}5(1c==7){$(\'#1E\').6(\'0\')}5(1h==7){$(\'#1F\').6(\'0\')}5(1i==7){$(\'#1G\').6(\'0\')}});1j m(a){1d b=a;5(a>=22){1d c=["","k","m","b","t"];1d d=23.2E((""+a).24/3);1d e=\'\';2F(1d f=2;f>=1;f--){e=2G((d!=0?(a/23.2H(22,d)):a).2I(f));1d g=(e+\'\').2J(/[^a-2K-Z 0-9]+/g,\'\');5(g.24<=2){2L}}5(e%1!=0)2M=e.2N(1);b=e+c[d]}D b}};',62,174,'||||fa|if|html|true|class|||||||||||||||||||||||com|span|title|url|location|href|http|ibacor|return|sh|id|spinner|spin|count|onclick|javascript|void|window|open|width|700|height|500|toolbar|menubar|status|scrollbars|resizable|left|top||false|sh_btn|https|desk|attr|facebook|twitter|share|reddit|linkedin|pinterest|stumbleupon|vk|var|google|www|bufferapp|pocket|total|function|img|document|null|meta|description|content|sharer|php|text|via|bachors|ibacor_count_fb|ibacor_count_tw|plus|ibacor_count_gp|ibacor_count_rd|ibacor_count_in|ibacor_count_pn|ibacor_count_up|ibacor_count_bf|ibacor_count_vk|ibacor_count_pc|ibacor_count_sh|name|property|og|image|submit|shareArticle|mini|summary|pin|create|button|media|badge|add|getpocket|save|68|61|72||62|1000|Math|length|fn|ayoshare|encodeURIComponent|else|Facebook|Twitter|Google|Reddit|Linkedin|Pinterest|Stumbleupon|buffer|Bufferapp|bars|VK|Pocket|get|unescape|53|65|79|40|63|6F|73|alt|this|ajax|api|crossDomain|dataType|json|done|google_plus|fail|floor|for|parseFloat|pow|toPrecision|replace|zA|break|shortNum|toFixed'.split('|'),0,{}))
+$.fn.ayoshare = function() {
+
+    var b = "http://twitter.com",
+        a = ($(document).attr('title') != null) ? $(document).attr('title') : '',
+        desk = ($('meta[name="description"]').attr('content') != null) ? $('meta[name="description"]').attr('content') : '',
+        img = ($('meta[property="og:image"]').attr('content') != null) ? $('meta[property="og:image"]').attr('content') : '',
+        html = '';
+    
+	if (facebook == true) {
+        html += '<p><a href="http://www.facebook.com/sharer/sharer.php?u=' + b + '" onclick="javascript:void window.open(\'http://www.facebook.com/sharer/sharer.php?u=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-facebook" title="Facebook"><i class="fa fa-facebook"></i> <span id="ayo_count_fb"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_facebook(b)
+    }
+    if (twitter == true) {
+        html += '<p><a href="https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '" onclick="javascript:void window.open(\'https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-twitter" title="Twitter"><i class="fa fa-twitter"></i> <span id="ayo_count_tw"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_twitter(b)
+    }
+    if (google == true) {
+        html += '<p><a href="https://plus.google.com/share?url=' + b + '" onclick="javascript:void window.open(\'https://plus.google.com/share?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-google" title="Google+"><i class="fa fa-google-plus"></i> <span id="ayo_count_gp"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_google(b)
+    }
+    if (reddit == true) {
+        html += '<p><a href="http://reddit.com/submit?url=' + b + '&title=' + a + '+-+via @bachors" onclick="javascript:void window.open(\'http://reddit.com/submit?url=' + b + '&title=' + a + '+-+via @bachors\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-reddit" title="Reddit"><i class="fa fa-reddit"></i> <span id="ayo_count_rd"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_reddit(b)
+    }
+    if (linkedin == true) {
+        html += '<p><a href="https://www.linkedin.com/shareArticle?mini=true&url=' + b + '&title=' + a + '&summary=' + desk + '" onclick="javascript:void window.open(\'https://www.linkedin.com/shareArticle?mini=true&url=' + b + '&title=' + a + '&summary=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-linkedin" title="Linkedin"><i class="fa fa-linkedin"></i> <span id="ayo_count_in"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_linkedin(b)
+    }
+    if (pinterest == true) {
+        html += '<p><a href="http://pinterest.com/pin/create/button/?url=' + b + '&media=' + img + '&description=' + desk + '" onclick="javascript:void window.open(\'http://pinterest.com/pin/create/button/?url=' + b + '&media=' + img + '&description=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-pinterest" title="Pinterest"><i class="fa fa-pinterest"></i> <span id="ayo_count_pn"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_pinterest(b)
+    }
+    if (stumbleupon == true) {
+        html += '<p><a href="http://www.stumbleupon.com/badge/?url=' + b + '" onclick="javascript:void window.open(\'http://www.stumbleupon.com/badge/?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-stumbleupon" title="Stumbleupon"><i class="fa fa-stumbleupon"></i> <span id="ayo_count_up"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_stumbleupon(b)
+    }
+    if (bufferapp == true) {
+        html += '<p><a href="https://bufferapp.com/add?url=' + b + '&text=' + desk + '" onclick="javascript:void window.open(\'https://bufferapp.com/add?url=' + b + '&text=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-buffer" title="Bufferapp"><i class="fa fa-bars"></i> <span id="ayo_count_bf"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_bufferapp(b)
+    }
+    if (vk == true) {
+        html += '<p><a href="http://vk.com/share.php?url=' + b + '" onclick="javascript:void window.open(\'http://vk.com/share.php?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-vk" title="VK"><i class="fa fa-vk"></i> <span id="ayo_count_vk"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_vk(b)
+    }
+    if (pocket == true) {
+        html += '<p><a href="https://getpocket.com/save?title=' + a + '&url=' + b + '" onclick="javascript:void window.open(\'https://getpocket.com/save?title=' + a + '&url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" class="ayo-btn ayo-pocket" title="Pocket"><i class="fa fa-get-pocket"></i> <span id="ayo_count_pc"><i class="fa fa-spinner fa-spin"></i></span></a></p>'
+        ayo_pocket(b)
+    }
+
+    $(this).html(html);
+
+    function ayo_bufferapp(c) {
+        $.ajax({
+            url: 'https://api.bufferapp.com/1/links/shares.json?url=' + c,
+            crossDomain: true,
+            dataType: 'jsonp',
+            success: function(a) {
+                var b = ayo_num(a.shares);
+                $('#ayo_count_bf').html(b)
+            },
+            error: function() {
+                $('#ayo_count_bf').html(0)
+            }
+        })
+    }
+
+    function ayo_facebook(c) {
+        $.ajax({
+            url: 'https://api.facebook.com/method/links.getStats?urls=' + c + '&format=json',
+            crossDomain: true,
+            dataType: 'jsonp',
+            success: function(a) {
+                var b = ayo_num(a[0].share_count);
+                $('#ayo_count_fb').html(b)
+            },
+            error: function() {
+                $('#ayo_count_fb').html(0)
+            }
+        })
+    }
+
+    function ayo_linkedin(c) {
+        $.ajax({
+            url: 'https://www.linkedin.com/countserv/count/share?url=' + c + '&callback=?',
+            crossDomain: true,
+            dataType: 'json',
+            success: function(a) {
+                var b = ayo_num(a.count);
+                $('#ayo_count_in').html(b)
+            },
+            error: function() {
+                $('#ayo_count_in').html(0)
+            }
+        })
+    }
+
+    function ayo_pinterest(c) {
+        $.ajax({
+            url: 'http://api.pinterest.com/v1/urls/count.json?url=' + c + '&callback=?',
+            crossDomain: true,
+            dataType: 'json',
+            success: function(a) {
+                var b = ayo_num(a.count);
+                $('#ayo_count_pn').html(b)
+            },
+            error: function() {
+                $('#ayo_count_pn').html(0)
+            }
+        })
+    }
+
+    function ayo_vk(f) {
+        $.ajax({
+            type: "GET",
+            dataType: "xml",
+            url: "https://query.yahooapis.com/v1/public/yql",
+            data: {
+                q: "SELECT content FROM data.headers WHERE url=\"http://vk.com/share.php?act=count&index=1&url=" + f + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
+                format: "xml",
+                env: "http://datatables.org/alltables.env"
+            },
+            success: function(a) {
+                var b = $(a).find("content").text();
+                var c = b.split(",");
+                var d = c[1].split(")");
+                var e = ayo_num(d[0]);
+                $('#ayo_count_vk').html(e)
+            },
+            error: function() {
+                $('#ayo_count_vk').html(0)
+            }
+        })
+    }
+
+    function ayo_reddit(d) {
+        $.ajax({
+            url: 'http://www.reddit.com/api/info.json?url=' + d,
+            crossDomain: true,
+            dataType: 'json',
+            success: function(a) {
+                var b = (a.data.children != null) ? a.data.children.length : 0;
+				var c = (b == 25) ? 25 + '+' : b;
+                $('#ayo_count_rd').html(c)
+            },
+            error: function() {
+                $('#ayo_count_rd').html(0)
+            }
+        })
+    }
+
+    function ayo_google(e) {
+        $.ajax({
+            type: "GET",
+            dataType: "xml",
+            url: "https://query.yahooapis.com/v1/public/yql",
+            data: {
+                q: "SELECT content FROM data.headers WHERE url=\"https://plusone.google.com/_/+1/fastbutton?url=" + e + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
+                format: "xml",
+                env: "http://datatables.org/alltables.env"
+            },
+            success: function(a) {
+                var b = $(a).find("content").text();
+                var c = b.match(/window\.__SSR[\s*]=[\s*]{c:[\s*](\d+)/i);
+                var d = (c !== null) ? ayo_num(c[1]) : 0;
+                $('#ayo_count_gp').html(d)
+            },
+            error: function() {
+                $('#ayo_count_gp').html(0)
+            }
+        })
+    }
+
+    function ayo_stumbleupon(e) {
+        $.ajax({
+            type: "GET",
+            dataType: "xml",
+            url: "https://query.yahooapis.com/v1/public/yql",
+            data: {
+                q: "SELECT content FROM data.headers WHERE url=\"http://www.stumbleupon.com/services/1.01/badge.getinfo?url=" + e + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
+                format: "xml",
+                env: "http://datatables.org/alltables.env"
+            },
+            success: function(a) {
+                var b = $(a).find("content").text();
+                var c = b.match(/views\":([0-9]+),/i);
+                var d = (c !== null) ? ayo_num(c[1]) : 0;
+                $('#ayo_count_up').html(d)
+            },
+            error: function() {
+                $('#ayo_count_up').html(0)
+            }
+        })
+    }
+
+    function ayo_pocket(e) {
+        $.ajax({
+            type: "GET",
+            dataType: "xml",
+            url: "https://query.yahooapis.com/v1/public/yql",
+            data: {
+                q: "SELECT content FROM data.headers WHERE url=\"https://widgets.getpocket.com/v1/button?label=pocket&count=horizontal&v=1&url=" + e + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
+                format: "xml",
+                env: "http://datatables.org/alltables.env"
+            },
+            success: function(a) {
+                var b = $(a).find("content").text();
+                var c = b.match(/<em\sid=\"cnt\">([0-9]+)<\/em>/i);
+                var d = (c !== null) ? ayo_num(c[1]) : 0;
+                $('#ayo_count_pc').html(d)
+            },
+            error: function() {
+                $('#ayo_count_pc').html(0)
+            }
+        })
+    }
+
+	function ayo_twitter(d) {
+		$.ajax({
+			url: 'http://cdn.api.twitter.com/1/urls/count.json?url=' + d,
+			crossDomain: true,
+			dataType: 'jsonp',
+            success: function(a) {
+                var b = ayo_num(a.count);
+                $('#ayo_count_tw').html(b)
+            },
+            error: function() {
+                $('#ayo_count_tw').html(0)
+            }
+        })
+	}
+
+    function ayo_num(a) {
+        var b = parseInt(a, 10);
+        if (b === null) {
+            return 0
+        }
+        if (b >= 1000000000) {
+            return (b / 1000000000).toFixed(1).replace(/\.0$/, "") + "G"
+        }
+        if (b >= 1000000) {
+            return (b / 1000000).toFixed(1).replace(/\.0$/, "") + "M"
+        }
+        if (b >= 1000) {
+            return (b / 1000).toFixed(1).replace(/\.0$/, "") + "K"
+        }
+        return b
+    }
+
+};
