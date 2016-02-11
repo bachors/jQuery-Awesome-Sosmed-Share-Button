@@ -21,7 +21,23 @@
 		<script src="src/js/ayoshare.js"></script>		
 		<script>
 		$(function() {
+
 			$("#share").ayoshare(
+				url = location.href, // Dynamic url = location.href,		
+				google = true, // true or false
+				stumbleupon = false,
+				facebook = true,
+				linkedin = true,
+				pinterest = true,
+				bufferapp = false,
+				reddit = false,
+				vk = false,
+				pocket = false,
+				twitter = true
+			);
+
+			$(".share2").ayoshare(
+				url = "http://twitter.com", // Static url = "http://your domain.com/blabla",			
 				google = true, // true or false
 				stumbleupon = true,
 				facebook = true,
@@ -33,6 +49,7 @@
 				pocket = true,
 				twitter = true
 			);
+
 		});
 		</script>
 
@@ -45,11 +62,21 @@
 				padding: 0;
 				margin: 0
 			}
+			code {
+				background: #333;
+				color: #f5f5f5;
+				padding: 2px 4px 2px 4px;
+				border-radius: 3px
+			}
 			#share {
 				text-align: center;
-				margin-top: 20%
+				margin-top: 15%
 			}
-			#share p{
+			.share2 {
+				text-align: center;
+				margin-top: 30px
+			}
+			#share p, .share2 p{
 				display:inline-block;
 				margin:10px 0px 10px;
 				padding:0
@@ -61,8 +88,12 @@
 	
 		<!-- Display all Shares Button -->
 		<div id="share"></div>
+		<center>Example dynamic url <code>url = location.href</code> and display facebook, twitter, google+, linkedin, pinterest only</center>		
+		
+		<div class="share2"></div>
+		<center>Example static url <code>url = "http://twitter.com"</code> and display all share button</center>
 
-		<p align="center"><a class="ayo-btn" style="background:#222" href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><i class="fa fa-github"></i> Fork me on Github</a></p>
+		<br><br><br><br><p align="center"><a class="ayo-btn" style="background:#222" href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><i class="fa fa-github"></i> Fork me on Github</a></p>
 
 	</body>
 </html>
