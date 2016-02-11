@@ -1,8 +1,8 @@
-a.sh_btn{
+a.ayo-btn{
 	color:#fff;
 	text-decoration:none
 }
-.sh_btn {
+.ayo-btn {
 	cursor:pointer;
 	color: #fff;
 	border: none;
@@ -11,72 +11,64 @@ a.sh_btn{
 	-webkit-transition: border .25s linear,color .25s linear,background-color .25s linear;
 	transition: border .25s linear,color .25s linear,background-color .25s linear
 }
-.sh_btn span{
+.ayo-btn span{
 	font-family: sans-serif
 }
-.sh_btn:hover {
+.ayo-btn:hover {
 	background-color: rgba(220,220,220,0.5);
 	color: #000
 }
-.sh-facebook {
+.ayo-facebook {
 	background-color: #4769a5;
 	border-color: #354d79;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-twitter {
+.ayo-twitter {
 	background-color: #51a3bf;
 	border-color: #408299;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-google {
+.ayo-google {
 	background-color: #bf3727;
 	border-color: #932b1f;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-linkedin {
+.ayo-linkedin {
 	background-color: #2ba3e1;
 	border-color: #207aa8;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-stumbleupon {
+.ayo-stumbleupon {
 	background-color: #eb4723;
 	border-color: #ab361d;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-reddit, .sh-buffer {
+.ayo-reddit, .ayo-buffer {
 	background-color: #333333;
 	border-color: #1d1d1d;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-pinterest {
+.ayo-pinterest {
 	background-color: #cc2209;
 	border-color: #9b1a20;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-vk {
+.ayo-vk {
 	background-color: #4c75a3;
 	border-color: #39587b;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
 }
-.sh-pocket {
+.ayo-pocket {
 	background-color: #e84352;
 	border-color: #c53946;
 	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
 	box-shadow: inset 0 -2px 0 rgba(0,0,0,.15)
-}
-.sh-total {
-	font-family: sans-serif;
-	background: #fff;
-	color: #888;
-	border: 1px solid rgba(0,0,0,.15);
-	padding: 9px;
-	border-radius: 10px;
 }
