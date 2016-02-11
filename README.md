@@ -22,7 +22,9 @@ Awesome Social Media Share Button With Share Count
 &lt;script src="src/js/ayoshare.js"&gt;&lt;/script&gt;        
 &lt;script&gt;
     $(function() {
+    
 		$("#share").ayoshare(
+			url = location.href, // Dynamic url	
 			google = true, // true or false
 			stumbleupon = true,
 			facebook = true,
@@ -34,6 +36,21 @@ Awesome Social Media Share Button With Share Count
 			pocket = true,
 			twitter = true
 		);
+		
+		$(".share2").ayoshare(
+			url = "http://your domain.com/blabla", // Static url
+			google = true, // true or false
+			stumbleupon = true,
+			facebook = true,
+			linkedin = true,
+			pinterest = true,
+			bufferapp = true,
+			reddit = true,
+			vk = true,
+			pocket = true,
+			twitter = true
+		);
+		
 	});
 &lt;/script&gt;</pre>
 <h1>Screenshot:</h1>
