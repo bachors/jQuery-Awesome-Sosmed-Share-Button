@@ -1,5 +1,5 @@
-jQuery-Awesome-Sosmed-Share-Button
-==================================
+AyoShare.js the new name of this plugin
+=======================================
 
 Awesome Social Media Share Button With Share Count
 
