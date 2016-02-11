@@ -7,7 +7,7 @@
 
 $.fn.ayoshare = function() {
 
-    var b = "http://twitter.com",
+    var b = encodeURIComponent(location.href),
         a = ($(document).attr('title') != null) ? $(document).attr('title') : '',
         desk = ($('meta[name="description"]').attr('content') != null) ? $('meta[name="description"]').attr('content') : '',
         img = ($('meta[property="og:image"]').attr('content') != null) ? $('meta[property="og:image"]').attr('content') : '',
