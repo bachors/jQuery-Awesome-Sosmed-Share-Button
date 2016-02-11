@@ -32,8 +32,7 @@ Awesome Social Media Share Button With Share Count
 			reddit = true,
 			vk = true,
 			pocket = true,
-			twitter = true,
-			total = true
+			twitter = true
 		);
 	});
 &lt;/script&gt;</pre>
@@ -41,5 +40,3 @@ Awesome Social Media Share Button With Share Count
 <img src="https://1.bp.blogspot.com/-3HZwy8Z-9tw/VrY0eRGxQMI/AAAAAAAABnM/o4W3sPPIJjo/s1600/sdsdssssssssss1.jpg">
 
 <h3><a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a></h3>
-<h2>This API by iBacor</h2>
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RG95K7HU7AFDS)
