@@ -20,11 +20,11 @@ JS
 &lt;script src="src/js/ayoshare.js"&gt;&lt;/script&gt;</pre>
 <h2>Example:</h2>
 <pre>&lt;!-- By Class Name --&gt;
-&lt;div class="anu" data-ayoshare="https://github.com"&gt;&lt;/div&gt;
-&lt;div class="anu" data-ayoshare="https://twitter.com"&gt;&lt;/div&gt;
+&lt;div class="anu" data-ayoshare="http://your-site.com/bla"&gt;&lt;/div&gt;
+&lt;div class="anu" data-ayoshare="http://your-site.com/foo/bar"&gt;&lt;/div&gt;
 
 &lt;!-- By ID --&gt;
-&lt;div id="unik" data-ayoshare="https://facebook.com"&gt;&lt;/div&gt;
+&lt;div id="unik" data-ayoshare="http://your-site.com/test.html"&gt;&lt;/div&gt;
 
 &lt;script&gt;
     $(function() {
