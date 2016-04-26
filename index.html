@@ -13,17 +13,81 @@
 
 		<!-- Include Font Awesome v4.1.0 -->
 		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- Custom Style -->
+		<link href="src/css/ayoshare.css" rel="stylesheet">
+		<!-- Demo Style -->
+		<style>
+			html, body {
+				text-align: center;
+				padding: 0;
+				margin: 0
+			}
+			pre {
+				text-align: left;
+				background: #f1f1f1;
+				color: #555;
+				padding: 10px;
+				border: 1px solid #aaa
+			}
+		</style>
 
+	</head>
+	<body>
+	
+		<a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+		
+		<h2>By Class Name</h2>
+		<div class="anu" data-ayoshare="https://github.com"></div>
+		<div class="anu" data-ayoshare="https://twitter.com"></div>	
+<pre>&lt;div class="anu" data-ayoshare="https://github.com"&gt;&lt;/div&gt;
+&lt;div class="anu" data-ayoshare="https://twitter.com"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    $(function() {
+        $(".anu").ayoshare(
+            google = true, // true or false
+            stumbleupon = false,
+            facebook = true,
+            linkedin = true,
+            pinterest = true,
+            bufferapp = false,
+            reddit = false,
+            vk = false,
+            pocket = false,
+            twitter = true
+        );
+    });
+&lt;/script&gt;</pre>	
+	
+		<h2>By ID</h2>
+		<div id="unik" data-ayoshare="https://facebook.com"></div>
+<pre>&lt;div id="unik" data-ayoshare="https://facebook.com"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    $(function() {
+        $("#unik").ayoshare(
+            google = true, // true or false
+            stumbleupon = true,
+            facebook = true,
+            linkedin = true,
+            pinterest = true,
+            bufferapp = true,
+            reddit = true,
+            vk = true,
+            pocket = true,
+            twitter = true
+        );
+    });
+&lt;/script&gt;</pre>
+		
 		<!-- Include jQuery -->
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
 		<!-- jQuery Awesome Sosmed Share Button -->
 		<script src="src/js/ayoshare.js"></script>		
 		<script>
 		$(function() {
 
-			$("#share").ayoshare(
-				url = location.href, // Dynamic url = location.href,		
+			$(".anu").ayoshare(
 				google = true, // true or false
 				stumbleupon = false,
 				facebook = true,
@@ -36,8 +100,7 @@
 				twitter = true
 			);
 
-			$(".share2").ayoshare(
-				url = "http://twitter.com", // Static url = "http://your domain.com/blabla",			
+			$("#unik").ayoshare(
 				google = true, // true or false
 				stumbleupon = true,
 				facebook = true,
@@ -52,48 +115,6 @@
 
 		});
 		</script>
-
-		<!-- Custom Style -->
-		<link href="src/css/ayoshare.css" rel="stylesheet">
-
-		<!-- Demo Style -->
-		<style>
-			html, body {
-				padding: 0;
-				margin: 0
-			}
-			code {
-				background: #333;
-				color: #f5f5f5;
-				padding: 2px 4px 2px 4px;
-				border-radius: 3px
-			}
-			#share {
-				text-align: center;
-				margin-top: 15%
-			}
-			.share2 {
-				text-align: center;
-				margin-top: 30px
-			}
-			#share p, .share2 p{
-				display:inline-block;
-				margin:10px 0px 10px;
-				padding:0
-			}
-		</style>
-
-	</head>
-	<body>
-	
-		<!-- Display all Shares Button -->
-		<div id="share"></div>
-		<center>Example dynamic url <code>url = location.href</code> and display facebook, twitter, google+, linkedin, pinterest only</center>		
 		
-		<div class="share2"></div>
-		<center>Example static url <code>url = "http://twitter.com"</code> and display all share button</center>
-
-		<br><br><br><br><p align="center"><a class="ayo-btn" style="background:#222" href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><i class="fa fa-github"></i> Fork me on Github</a></p>
-
 	</body>
 </html>
