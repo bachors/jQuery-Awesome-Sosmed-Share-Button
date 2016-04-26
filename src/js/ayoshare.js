@@ -6,7 +6,7 @@
  *********************************************************************/
 
 $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r) {
-    $(this).each(function(i, a) {
+    $(this).each(function(i, aa) {
         var b = encodeURIComponent($(this).data('ayoshare')),
             a = ($(document).attr('title') != null) ? $(document).attr('title') : '',
             desk = ($('meta[name="description"]').attr('content') != null) ? $('meta[name="description"]').attr('content') : '',
