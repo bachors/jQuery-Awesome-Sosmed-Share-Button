@@ -1,5 +1,5 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v12 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v13 ####
  * Coded by Ican Bachors 2014.
  * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
  * Updates will be posted to this site.
@@ -73,11 +73,11 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r) {
 
     function ayo_facebook(c, d) {
         $.ajax({
-            url: 'https://api.facebook.com/method/links.getStats?urls=' + c + '&format=json',
+            url: 'https://graph.facebook.com/v2.7/?id=' + c + '&access_token=443213172472393|l2IEt1tuyYta_278fR5NAg8V1jI',
             crossDomain: true,
             dataType: 'jsonp',
             success: function(a) {
-                var b = ayo_num(a[0].share_count);
+                var b = ayo_num(a.share.share_count);
                 $(d + ' .ayo_count_fb').html(b)
             },
             error: function() {
