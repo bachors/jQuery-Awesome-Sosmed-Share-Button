@@ -5,10 +5,17 @@ Awesome Social Media Share Button With Share Count
 
 <h2>Plug and play :)</h2>
 
+AyoShare.js v14 currently supports 10 social media sites & 4 mobile share:
+
+
+<ul>
+	<li>Google+</li><li>Stumbleupon</li><li>Facebook</li><li>Linkedin</li><li>Pinterest</li><li>Bufferapp</li><li>Reddit</li><li>Vk</li><li>Pocket</li><li>Twitter</li><li>Email</li><li>Whatsapp</li><li>Telegram</li><li>Viber<br></li>
+</ul>
+
 <h2>Usage:</h2>
 CSS
-<pre>&lt;!-- Include Font Awesome v4.1.0 --&gt;
-&lt;link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+<pre>&lt;!-- Include Font Awesome v4.6.0 --&gt;
+&lt;link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet"&gt;
 
 &lt;!-- Custom Style --&gt;
 &lt;link href="src/css/ayoshare.css" rel="stylesheet"&gt;</pre>
@@ -39,7 +46,11 @@ JS
             reddit = false,
             vk = false,
             pocket = false,
-            twitter = true
+            twitter = true,
+            email = true,
+            whatsapp = true,
+            telegram = true,
+            viber = false
         );
         
         $("#unik").ayoshare(
@@ -52,12 +63,14 @@ JS
             reddit = true,
             vk = true,
             pocket = true,
-            twitter = true
+            twitter = true,
+            email = false,
+            whatsapp = false,
+            telegram = false,
+            viber = true
         );
         
     });
 &lt;/script&gt;</pre>
-<h2>Screenshot:</h2>
-<img src="https://1.bp.blogspot.com/-3HZwy8Z-9tw/VrY0eRGxQMI/AAAAAAAABnM/o4W3sPPIJjo/s1600/sdsdssssssssss1.jpg">
 
 <h3><a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a></h3>
