@@ -12,7 +12,7 @@
 		<meta property="og:image" content="https://1.bp.blogspot.com/-3HZwy8Z-9tw/VrY0eRGxQMI/AAAAAAAABnM/o4W3sPPIJjo/s1600/sdsdssssssssss1.jpg" />
 
 		<!-- Include Font Awesome v4.1.0 -->
-		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- Custom Style -->
 		<link href="src/css/ayoshare.css" rel="stylesheet">
 		<!-- Demo Style -->
@@ -35,8 +35,8 @@
 	<body>
 	
 		<a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-		<h1>AyoShare.js v13</h1>
-		<p>Update: Facebook API v2.7</p>
+		<h1>AyoShare.js v14</h1>
+		<p>Update:<br>- New awesome button style.<br>- Add share via whatsapp, telegram, viber & email.<br>- Required fontawesome v4.6.x.</p>
 		<h2>By Class Name</h2>
 		<div class="anu" data-ayoshare="http://ibacor.com/labs/jquery-awesome-sosmed-share-button"></div>
 		<div class="anu" data-ayoshare="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/"></div>	
@@ -55,7 +55,11 @@
             reddit = false,
             vk = false,
             pocket = false,
-            twitter = true
+            twitter = true,
+            email = true,
+            whatsapp = true,
+            telegram = true,
+            viber = false
         );
     });
 &lt;/script&gt;</pre>	
@@ -76,7 +80,11 @@
             reddit = true,
             vk = true,
             pocket = true,
-            twitter = true
+            twitter = true,
+            email = false,
+            whatsapp = false,
+            telegram = false,
+            viber = true
         );
     });
 &lt;/script&gt;</pre>
@@ -98,7 +106,11 @@
 				reddit = false,
 				vk = false,
 				pocket = false,
-				twitter = true
+				twitter = true,
+				email = true,
+				whatsapp = true,
+				telegram = true,
+				viber = false
 			);
 
 			$("#unik").ayoshare(
@@ -111,7 +123,11 @@
 				reddit = true,
 				vk = true,
 				pocket = true,
-				twitter = true
+				twitter = true,
+				email = false,
+				whatsapp = false,
+				telegram = false,
+				viber = true
 			);
 
 		});
