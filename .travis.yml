@@ -1,0 +1,5 @@
+language: node_js
+node_js:
+  - stable
+before_install:
+  - npm install -g chai jquery html-to-json jsdom mocha mocha-jsdom jshint
