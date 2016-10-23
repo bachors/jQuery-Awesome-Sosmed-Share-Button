@@ -168,6 +168,7 @@
     background-color: #00B900; /* Green Line Logo color */
 }
 
+/* font awesome doesn't provide official Line Messenger icon */
 .fa-line{
     background-image: url("https://static.line.naver.jp/line_regulation/files/ver2/LINE_Icon.png"); /* Official Line Logo */
     background-size: cover;

@@ -5,11 +5,11 @@ Awesome Social Media Share Button With Share Count
 
 <h2>Plug and play :)</h2>
 
-AyoShare.js v14 currently supports 10 social media sites & 4 mobile share:
+AyoShare.js v14 currently supports 10 social media sites & 5 mobile share:
 
 
 <ul>
-	<li>Google+</li><li>Stumbleupon</li><li>Facebook</li><li>Linkedin</li><li>Pinterest</li><li>Bufferapp</li><li>Reddit</li><li>Vk</li><li>Pocket</li><li>Twitter</li><li>Email</li><li>Whatsapp</li><li>Telegram</li><li>Viber<br></li>
+	<li>Google+</li><li>Stumbleupon</li><li>Facebook</li><li>Linkedin</li><li>Pinterest</li><li>Bufferapp</li><li>Reddit</li><li>Vk</li><li>Pocket</li><li>Twitter</li><li>Email</li><li>Whatsapp</li><li>Telegram</li><li>Viber<br></li><li>Line<br></li>
 </ul>
 
 <h2>Usage:</h2>
@@ -50,7 +50,8 @@ JS
             email = true,
             whatsapp = true,
             telegram = true,
-            viber = false
+            viber = false,
+            line = true
         );
         
         $("#unik").ayoshare(
@@ -67,7 +68,8 @@ JS
             email = false,
             whatsapp = false,
             telegram = false,
-            viber = true
+            viber = true,
+            line = true
         );
         
     });

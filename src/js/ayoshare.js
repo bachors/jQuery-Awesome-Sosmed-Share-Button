@@ -79,6 +79,8 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, email, whatsapp, telegram
 			html += '<i class="mobile"><i class="fa fa-envelope"></i></i></a></div>';
         }
         if (line == true) {
+            // http://lineit.line.me automatically detected and directly open Line Messenger application
+            // It should not use Line protocol, e.g. line://...
             html += '<div class="line button"><a href="https://lineit.line.me/share/ui?url=' + b + '" target="_BLANK" title="Line">';
             html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>';
         }
