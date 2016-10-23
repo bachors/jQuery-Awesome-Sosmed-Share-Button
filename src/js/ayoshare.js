@@ -5,7 +5,7 @@
  * Updates will be posted to this site.
  *********************************************************************/
 
-$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, email, whatsapp, telegram, viber) {
+$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, email, whatsapp, telegram, viber, line) {
     $(this).each(function(i, aa) {
         var b = encodeURIComponent($(this).data('ayoshare')),
             a = ($(document).attr('title') != null) ? $(document).attr('title') : '',
@@ -77,6 +77,10 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, email, whatsapp, telegram
         if (email == true) {
             html += '<div class="email button"><a href="mailto:?subject=' + a + '&amp;body=' + desk + '%20' + b + '" title="Email">';
 			html += '<i class="mobile"><i class="fa fa-envelope"></i></i></a></div>';
+        }
+        if (line == true) {
+            html += '<div class="line button"><a href="https://lineit.line.me/share/ui?url=' + b + '" target="_BLANK" title="Line">';
+            html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>';
         }
         $(this).html('<div class="ayoshare">' + html + '</div>');
     });
