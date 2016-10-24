@@ -168,6 +168,77 @@
     background-color: #00B900; /* Green Line Logo color */
 }
 
+/* add hover effects */
+
+.ayoshare .facebook:hover .icon,
+.ayoshare .facebook:hover .counter {
+	background-color: #335591;
+}
+
+.ayoshare .google:hover .icon,
+.ayoshare .google:hover .counter{
+	background-color: #AB2313;
+}
+
+.ayoshare .linkedin:hover .icon,
+.ayoshare .linkedin:hover .counter {
+	background-color: #178FCD;
+}
+
+.ayoshare .stumbleupon:hover .icon,
+.ayoshare .stumbleupon:hover .counter {
+	background-color: #D7000F;
+}
+
+.ayoshare .bufferapp:hover .icon,
+.ayoshare .bufferapp:hover .counter {
+	background-color: #1E1E1E;
+}
+
+.ayoshare .reddit:hover .icon,
+.ayoshare .reddit:hover .counter {
+	background-color: #155CEB;
+}
+
+.ayoshare .pinterest:hover .icon,
+.ayoshare .pinterest:hover .counter {
+	background-color: #B80E00;
+}
+
+.ayoshare .vk:hover .icon,
+.ayoshare .vk:hover .counter {
+	background-color: #38618F;
+}
+
+.ayoshare .pocket:hover .icon,
+.ayoshare .pocket:hover .counter{
+	background-color: #D42F3E;
+}
+
+.ayoshare .twitter .mobile:hover{
+	background-color: #3D8FAB;
+}
+
+.ayoshare .email .mobile:hover {
+	background-color: #303030;
+}
+
+.ayoshare .whatsapp .mobile:hover {
+	background-color: #39AE33;
+}
+
+.ayoshare .telegram .mobile:hover {
+	background-color: #2099CD;
+}
+
+.ayoshare .viber .mobile:hover {
+	background-color: #683E8A;
+}
+
+.ayoshare .line .mobile:hover{
+    background-color: #00A500;
+}
+
 /* font awesome doesn't provide official Line Messenger icon */
 .fa-line{
     background-image: url("https://static.line.naver.jp/line_regulation/files/ver2/LINE_Icon.png"); /* Official Line Logo */
