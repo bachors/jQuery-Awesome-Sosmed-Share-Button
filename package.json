@@ -4,7 +4,7 @@
   "description": "Awesome Social Media Share Button With Share Count",
   "main": "index.js",
   "scripts": {
-    "test": "jshint src/js/*.js && echo \" ✓ jshint src/js/*.js passed\n\" && jshint test/*.js && echo \" ✓ jshint test/*.js passed\n\" && mocha --timeout 20000 test/index.js && echo \" ✓ mocha --timeout 20000 test/index.js passed\n\""
+    "test": "echo \"Pengujian dimulai... \n\" && jshint src/js/*.js && echo \" ✓ jshint src/js/*.js passed\n\" && jshint test/*.js && echo \" ✓ jshint test/*.js passed\n\" && mocha --timeout 20000 test/index.js && echo \" ✓ mocha --timeout 20000 test/index.js passed\n\""
   },
   "repository": {
     "type": "git",
