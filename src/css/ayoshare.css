@@ -168,7 +168,7 @@
     background-color: #00B900; /* Green Line Logo color */
 }
 
-/* add hover effects */
+/* add hover and active effects */
 
 .ayoshare .facebook:hover .icon,
 .ayoshare .facebook:hover .counter {
@@ -237,6 +237,75 @@
 
 .ayoshare .line .mobile:hover{
     background-color: #00A500;
+}
+
+.ayoshare .facebook:active .icon,
+.ayoshare .facebook:active .counter {
+	background-color: #132038;
+}
+
+.ayoshare .google:active .icon,
+.ayoshare .google:active .counter{
+	background-color: #66140b;
+}
+
+.ayoshare .linkedin:active .icon,
+.ayoshare .linkedin:active .counter {
+	background-color: #08374f;
+}
+
+.ayoshare .stumbleupon:active .icon,
+.ayoshare .stumbleupon:active .counter {
+	background-color: #770008;
+}
+
+.ayoshare .bufferapp:active .icon,
+.ayoshare .bufferapp:active .counter {
+	background-color: #000000;
+}
+
+.ayoshare .reddit:active .icon,
+.ayoshare .reddit:active .counter {
+	background-color: #092f7a;
+}
+
+.ayoshare .pinterest:active .icon,
+.ayoshare .pinterest:active .counter {
+	background-color: #630700;
+}
+
+.ayoshare .vk:active .icon,
+.ayoshare .vk:active .counter {
+	background-color: #0d1823;
+}
+
+.ayoshare .twitter .mobile:active{
+	background-color: #235566;
+}
+
+.ayoshare .pocket:active .icon,
+.ayoshare .pocket:active .counter{
+	background-color: #7c1b24;
+}
+
+.ayoshare .email .mobile:active {
+	background-color: #0c0c0c;
+}
+
+.ayoshare .whatsapp .mobile:active {
+	background-color: #1e5e1b;
+}
+
+.ayoshare .telegram .mobile:active {
+	background-color: #135b7a;
+}
+
+.ayoshare .viber .mobile:active {
+	background-color: #2e1b3d;
+}
+
+.ayoshare .line .mobile:active{
+    background-color: #004900;
 }
 
 /* font awesome doesn't provide official Line Messenger icon */
