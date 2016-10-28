@@ -1,5 +1,5 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v14 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v15 ####
  * Coded by Ican Bachors 2014.
  * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
  * Updates will be posted to this site.
@@ -7,13 +7,16 @@
 
 $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w) {
     $(this).each(function(i, d) {
-        var b = encodeURIComponent($(this).data('ayoshare')),			
-			a = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
-            desk = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
-            img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : ''),
-            c = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
-			html = '';
-		if (k == true) {
+        var e = new RegExp(location.host),
+            or = $(this).data('ayoshare'),
+            b = encodeURIComponent(or),
+            ro = (e.test(or) ? ayo_og_in(or) : ayo_og_ex(or)),
+            a = ro.tit,
+            desk = ro.des,
+            img = ro.img,
+            html = '';
+        var c = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class'));
+        if (k == true) {
             html += '<div class="facebook button"><a href="http://www.facebook.com/sharer/sharer.php?u=' + b + '" onclick="javascript:void window.open(\'http://www.facebook.com/sharer/sharer.php?u=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Facebook">';
             html += '<i class="icon"><i class="fa fa-facebook"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_facebook(b, c, i)
@@ -84,6 +87,75 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w) {
         }
         $(this).html('<div class="ayoshare">' + html + '</div>')
     });
+
+    function ayo_og_in(c) {
+        var d = '';
+        $.ajax({
+            url: c,
+            async: false,
+            success: function(a) {
+                var b = ($(a).filter('title').text() != null && $(a).filter('title').text() != undefined ? $(a).filter('title').text() : ''),
+                    des = ($(a).filter('meta[name="description"]').attr("content") != null && $(a).filter('meta[name="description"]').attr("content") != undefined ? $(a).filter('meta[name="description"]').attr("content") : ''),
+                    img = ($(a).filter('meta[property="og:image"]').attr("content") != null && $(a).filter('meta[property="og:image"]').attr("content") != undefined ? $(a).filter('meta[property="og:image"]').attr("content") : '');
+                d = {
+                    tit: b,
+                    des: des,
+                    img: img
+                }
+            },
+            error: function() {
+                var a = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
+                    des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
+                    img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
+                d = {
+                    tit: a,
+                    des: des,
+                    img: img
+                }
+            }
+        });
+        return d
+    }
+
+    function ayo_og_ex(c) {
+        var d = '';
+        $.ajax({
+            url: 'https://opengraph.io/api/1.0/site/' + encodeURIComponent(c),
+            async: false,
+            crossDomain: true,
+            dataType: 'json',
+            success: function(a) {
+                var b = '',
+                    des = '',
+                    img = '';
+                if (a.error != null && a.error != undefined) {
+                    b = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : '');
+                    des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : '');
+                    img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
+                } else {
+                    b = a.hybridGraph.title;
+                    des = a.hybridGraph.description;
+                    img = a.hybridGraph.image;
+                }
+                d = {
+                    tit: b,
+                    des: des,
+                    img: img
+                }
+            },
+            error: function() {
+                var a = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
+                    des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
+                    img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
+                d = {
+                    tit: a,
+                    des: des,
+                    img: img
+                }
+            }
+        });
+        return d
+    }
 
     function ayo_bufferapp(c, d, z) {
         $.ajax({
