@@ -5,7 +5,7 @@ Awesome Social Media Share Button With Share Count
 
 <h2>Plug and play :)</h2>
 
-AyoShare.js v14 currently supports 10 social media sites & 5 mobile share:
+AyoShare.js currently supports 10 social media sites & 5 mobile share:
 
 
 <ul>
