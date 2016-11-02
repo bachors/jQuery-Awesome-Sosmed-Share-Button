@@ -5,7 +5,7 @@
  * Updates will be posted to this site.
  *********************************************************************/
 
-$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w) {
+$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
     $(this).each(function(i, d) {
         var e = new RegExp(location.host),
             or = $(this).data('ayoshare'),
@@ -48,7 +48,7 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w) {
         }
         if (n == true) {
             html += '<div class="bufferapp button"><a href="https://bufferapp.com/add?url=' + b + '&text=' + desk + '" onclick="javascript:void window.open(\'https://bufferapp.com/add?url=' + b + '&text=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Bufferapp">';
-            html += '<i class="icon"><i class="fa fa-bars"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+            html += '<i class="icon"><i class="fa fa-bufferapp"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_bufferapp(b, c, i)
         }
         if (p == true) {
@@ -84,6 +84,10 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w) {
         if (w == true) {
             html += '<div class="line button"><a href="line://msg/text/' + a + '%20' + b + '" target="_BLANK" title="Line">';
             html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>'
+        }
+        if (x == true) {
+            html += '<div class="bbm button"><a href="bbmi://api/share?message=' + a + '%20' + b + '" target="_BLANK" title="BBM">';
+            html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>'
         }
         $(this).html('<div class="ayoshare">' + html + '</div>')
     });
