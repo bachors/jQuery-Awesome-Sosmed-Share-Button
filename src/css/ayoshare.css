@@ -56,12 +56,11 @@
     height: 100%;
     vertical-align: top;
     width: 100%;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -moz-border-radius-bottomleft: 0px;
-    -webkit-border-radius: 0px 3px 3px 0px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     text-align: center;
 }
 
