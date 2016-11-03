@@ -56,12 +56,12 @@
     height: 100%;
     vertical-align: top;
     width: 100%;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 0px;
-    -moz-border-radius-bottomright: 0px;
-    -moz-border-radius-bottomleft: 3px;
-    -webkit-border-radius: 3px 0px 0px 3px;
-    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 3px 3px 0px;
     text-align: center;
 }
 
@@ -88,7 +88,6 @@
 
 .ayoshare .counter p {
     font-weight: 400;
-    border-left: 1px solid #fff;
     border-left: 1px solid rgba(255,255,255,0.35);
     color: #fff;
     font-size: 16px;
