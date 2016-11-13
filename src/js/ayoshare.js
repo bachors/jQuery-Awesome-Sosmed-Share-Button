@@ -122,25 +122,22 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
     }
 
     function ayo_og_ex(c) {
-        var d = '';
+        var d = '';		
         $.ajax({
-            url: 'https://opengraph.io/api/1.0/site/' + encodeURIComponent(c),
+            type: "GET",
+            dataType: "xml",
+            url: "https://query.yahooapis.com/v1/public/yql",
             async: false,
-            crossDomain: true,
-            dataType: 'json',
-            success: function(a) {
-                var b = '',
-                    des = '',
-                    img = '';
-                if (a.error != null && a.error != undefined) {
-                    b = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : '');
-                    des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : '');
-                    img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
-                } else {
-                    b = a.hybridGraph.title;
-                    des = a.hybridGraph.description;
-                    img = a.hybridGraph.image;
-                }
+            data: {
+                q: "SELECT content FROM data.headers WHERE url=\"" + c + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
+                format: "xml",
+                env: "http://datatables.org/alltables.env"
+            },
+            success: function(xml) {
+				var a = $(xml).find("content").text(),
+					b = ($(a).filter('title').text() != null && $(a).filter('title').text() != undefined ? $(a).filter('title').text() : ''),
+                    des = ($(a).filter('meta[name="description"]').attr("content") != null && $(a).filter('meta[name="description"]').attr("content") != undefined ? $(a).filter('meta[name="description"]').attr("content") : ''),
+                    img = ($(a).filter('meta[property="og:image"]').attr("content") != null && $(a).filter('meta[property="og:image"]').attr("content") != undefined ? $(a).filter('meta[property="og:image"]').attr("content") : '');
                 d = {
                     tit: b,
                     des: des,
@@ -159,7 +156,7 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
             }
         });
         return d
-    }
+	}
 
     function ayo_bufferapp(c, d, z) {
         $.ajax({
@@ -342,4 +339,4 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
         }
         return b
     }
-};
+}
