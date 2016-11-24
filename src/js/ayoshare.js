@@ -5,7 +5,7 @@
  * Updates will be posted to this site.
  *********************************************************************/
 
-$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
+$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, y, s, t, u, v, w, x) {
     $(this).each(function(i, d) {
         var e = new RegExp(location.host),
             or = $(this).data('ayoshare'),
@@ -65,6 +65,10 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
             html += '<div class="twitter button"><a href="https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '" onclick="javascript:void window.open(\'https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Twitter">';
             html += '<i class="mobile"><i class="fa fa-twitter"></i></i></a></div>'
         }
+        if (y == true) {
+            html += '<div class="digg button"><a href="http://digg.com/submit?url=' + b + '" onclick="javascript:void window.open(\'http://digg.com/submit?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Digg">';
+            html += '<i class="mobile"><i class="fa fa-digg"></i></i></a></div>'
+        }
         if (t == true) {
             html += '<div class="whatsapp button"><a href="whatsapp://send?text=' + a + '%20' + b + '" target="_BLANK" title="Whatsapp">';
             html += '<i class="mobile"><i class="fa fa-whatsapp"></i></i></a></div>'
@@ -122,7 +126,7 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
     }
 
     function ayo_og_ex(c) {
-        var d = '';		
+        var d = '';
         $.ajax({
             type: "GET",
             dataType: "xml",
@@ -133,9 +137,9 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
                 format: "xml",
                 env: "http://datatables.org/alltables.env"
             },
-            success: function(xml) {
-				var a = $(xml).find("content").text(),
-					b = ($(a).filter('title').text() != null && $(a).filter('title').text() != undefined ? $(a).filter('title').text() : ''),
+            success: function(c) {
+                var a = $(c).find("content").text(),
+                    b = ($(a).filter('title').text() != null && $(a).filter('title').text() != undefined ? $(a).filter('title').text() : ''),
                     des = ($(a).filter('meta[name="description"]').attr("content") != null && $(a).filter('meta[name="description"]').attr("content") != undefined ? $(a).filter('meta[name="description"]').attr("content") : ''),
                     img = ($(a).filter('meta[property="og:image"]').attr("content") != null && $(a).filter('meta[property="og:image"]').attr("content") != undefined ? $(a).filter('meta[property="og:image"]').attr("content") : '');
                 d = {
@@ -156,7 +160,7 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x) {
             }
         });
         return d
-	}
+    }
 
     function ayo_bufferapp(c, d, z) {
         $.ajax({
