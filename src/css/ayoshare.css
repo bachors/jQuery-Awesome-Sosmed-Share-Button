@@ -18,12 +18,7 @@
     height: 40px;
     margin: 4px;
     overflow: hidden;
-    width: 98px;
-    border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    width: 98px
 }
 
 .ayoshare .icon {
@@ -34,12 +29,6 @@
     height: 100%;
     vertical-align: top;
     width: 38px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 0px;
-    -moz-border-radius-bottomright: 0px;
-    -moz-border-radius-bottomleft: 3px;
-    -webkit-border-radius: 3px 0px 0px 3px;
-    border-radius: 3px 0px 0px 3px;
     text-align: center;
 }
 
@@ -56,11 +45,6 @@
     height: 100%;
     vertical-align: top;
     width: 100%;
-    border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
     text-align: center;
 }
 
@@ -76,13 +60,7 @@
     height: 100%;
     left: 38px;
     position: absolute;
-    width: 60px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -moz-border-radius-bottomleft: 0px;
-    -webkit-border-radius: 0px 3px 3px 0px;
-    border-radius: 0px 3px 3px 0px;
+    width: 60px
 }
 
 .ayoshare .counter p {
@@ -150,6 +128,10 @@
 
 .ayoshare .twitter .mobile {
 	background-color: #51a3bf;
+}
+
+.ayoshare .digg .mobile {
+	background-color: #1b5891;
 }
 
 .ayoshare .email .mobile {
