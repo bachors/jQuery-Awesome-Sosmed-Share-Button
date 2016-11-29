@@ -5,12 +5,27 @@ Awesome Social Media Share Button With Share Count
 
 <h2>Plug and play :)</h2>
 
-AyoShare.js currently supports 11 social media sites & 6 mobile share:
-
-
+Options:
 <ul>
-	<li>Google+</li><li>Stumbleupon</li><li>Facebook</li><li>Linkedin</li><li>Pinterest</li><li>Bufferapp</li><li>Reddit</li><li>Vk</li><li>Pocket</li><li>Twitter</li><li>Digg</li><li>Email</li><li>Whatsapp</li><li>Telegram</li><li>Viber<br></li><li>Line</li><li>BBM</li>
-</ul>
+			<li>google</li>
+			<li>stumbleupon</li>
+			<li>facebook</li>
+			<li>linkedin</li>
+			<li>pinterest</li>
+			<li>bufferapp</li>
+			<li>reddit</li>
+			<li>vk</li>
+			<li>pocket</li>
+			<li>twitter</li>
+			<li>digg</li>
+			<li>email</li>
+			<li>whatsapp</li>
+			<li>telegram</li>
+			<li>viber</li>
+			<li>line</li>
+			<li>bbm</li>
+		</ul>
+Value option: <code>true</code>
 
 <h3><a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button/tree/master/src">DOWNLOAD</a></h3>
 
@@ -38,45 +53,33 @@ JS
 &lt;script&gt;
     $(function() {
     
-        $(".anu").ayoshare(
-            google = true, // true or false
-            stumbleupon = false,
-            facebook = true,
-            linkedin = true,
-            pinterest = true,
-            bufferapp = false,
-            reddit = false,
-            vk = false,
-            pocket = false,
-            twitter = true,
-            digg = true,
-            email = true,
-            whatsapp = true,
-            telegram = true,
-            viber = false,
-            line = true,
-            bbm = true
-        );
+        $(".anu").ayoshare({
+            google : true,
+            facebook : true,
+            pinterest : true,
+            linkedin : true,
+            twitter : true,
+            email : true,
+            whatsapp : true,
+            telegram : true,
+            line : true,
+            bbm : true,
+            viber : true
+        });
         
-        $("#unik").ayoshare(
-            google = true, // true or false
-            stumbleupon = true,
-            facebook = true,
-            linkedin = true,
-            pinterest = true,
-            bufferapp = true,
-            reddit = true,
-            vk = true,
-            pocket = true,
-            twitter = true,
-            digg = true,
-            email = false,
-            whatsapp = false,
-            telegram = false,
-            viber = true,
-            line = true,
-            bbm = false
-        );
+        $("#unik").ayoshare({
+            google : true,
+            stumbleupon : true,
+            facebook : true,
+            pinterest : true,
+            bufferapp : true,
+            reddit : true,
+            vk : true,
+            pocket : true,
+            twitter : true,
+            digg : true,
+            telegram : true
+        });
         
     });
 &lt;/script&gt;</pre>
