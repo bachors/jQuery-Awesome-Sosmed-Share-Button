@@ -18,8 +18,7 @@
 		<!-- Demo Style -->
 		<style>
 			html, body {
-				text-align: center;
-				padding: 0;
+				padding: 10px;
 				margin: 0
 			}
 			pre {
@@ -35,11 +34,29 @@
 	<body>
 	
 		<a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button" target="_BLANK"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-		<h1>AyoShare.js v15</h1>
-		<p>Update:<br>- Add dinamic open graph internal & external url.
-		<br>- Add BBM sharing message.
-		<br>- Fix Bufferapp, Line & BBM icon.</p>
-		<h2>By Class Name</h2>
+		<h1 align="center">AyoShare.js v16</h1>
+		<p><b>Options:</b>
+		<ul>
+			<li>google</li>
+			<li>stumbleupon</li>
+			<li>facebook</li>
+			<li>linkedin</li>
+			<li>pinterest</li>
+			<li>bufferapp</li>
+			<li>reddit</li>
+			<li>vk</li>
+			<li>pocket</li>
+			<li>twitter</li>
+			<li>digg</li>
+			<li>email</li>
+			<li>whatsapp</li>
+			<li>telegram</li>
+			<li>viber</li>
+			<li>line</li>
+			<li>bbm</li>
+		</ul>
+		</p>
+		<p><b>Value option:</b> true</p>
 		<div class="anu" data-ayoshare="http://ibacor.com/labs/jquery-awesome-sosmed-share-button"></div>
 		<div class="anu" data-ayoshare="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/"></div>	
 <pre>&lt;div class="anu" data-ayoshare="http://ibacor.com/labs/jquery-awesome-sosmed-share-button"&gt;&lt;/div&gt;
@@ -47,53 +64,40 @@
 
 &lt;script&gt;
     $(function() {
-        $(".anu").ayoshare(
-            google = true, // true or false
-            stumbleupon = false,
-            facebook = true,
-            linkedin = true,
-            pinterest = true,
-            bufferapp = false,
-            reddit = false,
-            vk = false,
-            pocket = false,
-            twitter = true,
-            digg = true,
-            email = true,
-            whatsapp = true,
-            telegram = true,
-            viber = false,
-            line = true,
-            bbm = true
-        );
+        $(".anu").ayoshare({
+            google : true,
+            facebook : true,
+            pinterest : true,
+            linkedin : true,
+            twitter : true,
+            email : true,
+            whatsapp : true,
+            telegram : true,
+            line : true,
+            bbm : true,
+            viber : true
+        });
     });
 &lt;/script&gt;</pre>	
 	
-		<h2>By ID</h2>
 		<div id="unik" data-ayoshare="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button"></div>
 <pre>&lt;div id="unik" data-ayoshare="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button"&gt;&lt;/div&gt;
 
 &lt;script&gt;
     $(function() {
-        $("#unik").ayoshare(
-            google = true, // true or false
-            stumbleupon = true,
-            facebook = true,
-            linkedin = false,
-            pinterest = true,
-            bufferapp = true,
-            reddit = true,
-            vk = true,
-            pocket = true,
-            twitter = true,
-            digg = true,
-            email = false,
-            whatsapp = false,
-            telegram = false,
-            viber = true,
-            line = false,
-            bbm = false
-        );
+        $("#unik").ayoshare({
+            google : true,
+            stumbleupon : true,
+            facebook : true,
+            pinterest : true,
+            bufferapp : true,
+            reddit : true,
+            vk : true,
+            pocket : true,
+            twitter : true,
+            digg : true,
+            telegram : true
+        });
     });
 &lt;/script&gt;</pre>
 		
@@ -103,44 +107,32 @@
 		<script src="js/ayoshare.js"></script>		
 		<script>
 		$(function() {
-			$(".anu").ayoshare(
-				google = true, // true or false
-				stumbleupon = false,
-				facebook = true,
-				linkedin = true,
-				pinterest = true,
-				bufferapp = false,
-				reddit = false,
-				vk = false,
-				pocket = false,
-				twitter = true,
-				digg = true,
-				email = true,
-				whatsapp = true,
-				telegram = true,
-				viber = false,
-                line = true,
-                bbm = true
-			);
-			$("#unik").ayoshare(
-				google = true, // true or false
-				stumbleupon = true,
-				facebook = true,
-				linkedin = false,
-				pinterest = true,
-				bufferapp = true,
-				reddit = true,
-				vk = true,
-				pocket = true,
-				twitter = true,
-				digg = true,
-				email = false,
-				whatsapp = false,
-				telegram = false,
-				viber = true,
-				line = false,
-				bbm = false
-			);
+			$(".anu").ayoshare({
+				google : true,
+				facebook : true,
+				pinterest : true,
+				linkedin : true,
+				twitter : true,
+				email : true,
+				whatsapp : true,
+				telegram : true,
+				line : true,
+				bbm : true,
+				viber : true
+			});
+			$("#unik").ayoshare({
+				google : true,
+				stumbleupon : true,
+				facebook : true,
+				pinterest : true,
+				bufferapp : true,
+				reddit : true,
+				vk : true,
+				pocket : true,
+				twitter : true,
+				digg : true,
+				telegram : true
+			});
 		});
 		</script>
 		
