@@ -1,11 +1,47 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v15 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v16 ####
  * Coded by Ican Bachors 2014.
  * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
  * Updates will be posted to this site.
  *********************************************************************/
 
-$.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, y, s, t, u, v, w, x) {
+$.fn.ayoshare = function(opt) {
+	var defaultopt = {
+        google : false,
+		stumbleupon : false,
+		facebook : false,
+		linkedin : false,
+		pinterest : false,
+		bufferapp : false,
+		reddit : false,
+		vk : false,
+		pocket : false,
+		twitter : false,
+		digg : false,
+		email : false,
+		whatsapp : false,
+		telegram : false,
+		viber : false,
+		line : false,
+		bbm : false
+    };
+	opt.google = (opt.google == undefined ? defaultopt.google : opt.google);
+	opt.stumbleupon = (opt.stumbleupon == undefined ? defaultopt.stumbleupon : opt.stumbleupon);
+	opt.facebook = (opt.facebook == undefined ? defaultopt.facebook : opt.facebook);
+	opt.linkedin = (opt.linkedin == undefined ? defaultopt.linkedin : opt.linkedin);
+	opt.pinterest = (opt.pinterest == undefined ? defaultopt.pinterest : opt.pinterest);
+	opt.bufferapp = (opt.bufferapp == undefined ? defaultopt.bufferapp : opt.bufferapp);
+	opt.reddit = (opt.reddit == undefined ? defaultopt.reddit : opt.reddit);
+	opt.vk = (opt.vk == undefined ? defaultopt.vk : opt.vk);
+	opt.pocket = (opt.pocket == undefined ? defaultopt.pocket : opt.pocket);
+	opt.twitter = (opt.twitter == undefined ? defaultopt.twitter : opt.twitter);
+	opt.digg = (opt.digg == undefined ? defaultopt.digg : opt.digg);
+	opt.email = (opt.email == undefined ? defaultopt.email : opt.email);
+	opt.whatsapp = (opt.whatsapp == undefined ? defaultopt.whatsapp : opt.whatsapp);
+	opt.telegram = (opt.telegram == undefined ? defaultopt.telegram : opt.telegram);
+	opt.viber = (opt.viber == undefined ? defaultopt.viber : opt.viber);
+	opt.line = (opt.line == undefined ? defaultopt.line : opt.line);
+	opt.bbm = (opt.bbm == undefined ? defaultopt.bbm : opt.bbm);
     $(this).each(function(i, d) {
         var e = new RegExp(location.host),
             or = $(this).data('ayoshare'),
@@ -16,80 +52,80 @@ $.fn.ayoshare = function(h, j, k, l, m, n, o, p, q, r, y, s, t, u, v, w, x) {
             img = ro.img,
             html = '';
         var c = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class'));
-        if (k == true) {
+        if (opt.facebook == true) {
             html += '<div class="facebook button"><a href="http://www.facebook.com/sharer/sharer.php?u=' + b + '" onclick="javascript:void window.open(\'http://www.facebook.com/sharer/sharer.php?u=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Facebook">';
             html += '<i class="icon"><i class="fa fa-facebook"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_facebook(b, c, i)
         }
-        if (h == true) {
+        if (opt.google == true) {
             html += '<div class="google button"><a href="https://plus.google.com/share?url=' + b + '" onclick="javascript:void window.open(\'https://plus.google.com/share?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Google+">';
             html += '<i class="icon"><i class="fa fa-google-plus"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_google(b, c, i)
         }
-        if (o == true) {
+        if (opt.reddit == true) {
             html += '<div class="reddit button"><a href="http://reddit.com/submit?url=' + b + '&title=' + a + '+-+via @bachors" onclick="javascript:void window.open(\'http://reddit.com/submit?url=' + b + '&title=' + a + '+-+via @bachors\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Reddit">';
             html += '<i class="icon"><i class="fa fa-reddit"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_reddit(b, c, i)
         }
-        if (l == true) {
+        if (opt.linkedin == true) {
             html += '<div class="linkedin button"><a href="https://www.linkedin.com/shareArticle?mini=true&url=' + b + '&title=' + a + '&summary=' + desk + '" onclick="javascript:void window.open(\'https://www.linkedin.com/shareArticle?mini=true&url=' + b + '&title=' + a + '&summary=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Linkedin">';
             html += '<i class="icon"><i class="fa fa-linkedin"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_linkedin(b, c, i)
         }
-        if (m == true) {
+        if (opt.pinterest == true) {
             html += '<div class="pinterest button"><a href="http://pinterest.com/pin/create/button/?url=' + b + '&media=' + img + '&description=' + desk + '" onclick="javascript:void window.open(\'http://pinterest.com/pin/create/button/?url=' + b + '&media=' + img + '&description=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Pinterest">';
             html += '<i class="icon"><i class="fa fa-pinterest"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_pinterest(b, c, i)
         }
-        if (j == true) {
+        if (opt.stumbleupon == true) {
             html += '<div class="stumbleupon button"><a href="http://www.stumbleupon.com/badge/?url=' + b + '" onclick="javascript:void window.open(\'http://www.stumbleupon.com/badge/?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Stumbleupon">';
             html += '<i class="icon"><i class="fa fa-stumbleupon"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_stumbleupon(b, c, i)
         }
-        if (n == true) {
+        if (opt.bufferapp == true) {
             html += '<div class="bufferapp button"><a href="https://bufferapp.com/add?url=' + b + '&text=' + desk + '" onclick="javascript:void window.open(\'https://bufferapp.com/add?url=' + b + '&text=' + desk + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Bufferapp">';
             html += '<i class="icon"><i class="fa fa-bufferapp"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_bufferapp(b, c, i)
         }
-        if (p == true) {
+        if (opt.vk == true) {
             html += '<div class="vk button"><a href="http://vk.com/share.php?url=' + b + '" onclick="javascript:void window.open(\'http://vk.com/share.php?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Vk">';
             html += '<i class="icon"><i class="fa fa-vk"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_vk(b, c, i)
         }
-        if (q == true) {
+        if (opt.pocket == true) {
             html += '<div class="pocket button"><a href="https://getpocket.com/save?title=' + a + '&url=' + b + '" onclick="javascript:void window.open(\'https://getpocket.com/save?title=' + a + '&url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Pocket">';
             html += '<i class="icon"><i class="fa fa-get-pocket"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
             ayo_pocket(b, c, i)
         }
-        if (r == true) {
+        if (opt.twitter == true) {
             html += '<div class="twitter button"><a href="https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '" onclick="javascript:void window.open(\'https://twitter.com/share?text=' + a + '+-+via @bachors&url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Twitter">';
             html += '<i class="mobile"><i class="fa fa-twitter"></i></i></a></div>'
         }
-        if (y == true) {
+        if (opt.digg == true) {
             html += '<div class="digg button"><a href="http://digg.com/submit?url=' + b + '" onclick="javascript:void window.open(\'http://digg.com/submit?url=' + b + '\',\'ibacor.com\',\'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0\');return false;" title="Digg">';
             html += '<i class="mobile"><i class="fa fa-digg"></i></i></a></div>'
         }
-        if (t == true) {
+        if (opt.whatsapp == true) {
             html += '<div class="whatsapp button"><a href="whatsapp://send?text=' + a + '%20' + b + '" target="_BLANK" title="Whatsapp">';
             html += '<i class="mobile"><i class="fa fa-whatsapp"></i></i></a></div>'
         }
-        if (u == true) {
+        if (opt.telegram == true) {
             html += '<div class="telegram button"><a href="tg://msg_url?text=' + a + '%20' + b + '" target="_BLANK" title="Telegram">';
             html += '<i class="mobile"><i class="fa fa-paper-plane"></i></i></a></div>'
         }
-        if (v == true) {
+        if (opt.viber == true) {
             html += '<div class="viber button"><a href="viber://forward?text=' + a + '%20' + b + '" target="_BLANK" title="Viber">';
             html += '<i class="mobile"><i class="fa fa-volume-control-phone"></i></i></a></div>'
         }
-        if (s == true) {
+        if (opt.email == true) {
             html += '<div class="email button"><a href="mailto:?subject=' + a + '&amp;body=' + desk + '%20' + b + '" title="Email">';
             html += '<i class="mobile"><i class="fa fa-envelope"></i></i></a></div>'
         }
-        if (w == true) {
+        if (opt.line == true) {
             html += '<div class="line button"><a href="line://msg/text/' + a + '%20' + b + '" target="_BLANK" title="Line">';
             html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>'
         }
-        if (x == true) {
+        if (opt.bbm == true) {
             html += '<div class="bbm button"><a href="bbmi://api/share?message=' + a + '%20' + b + '" target="_BLANK" title="BBM">';
             html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>'
         }
