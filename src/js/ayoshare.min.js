@@ -1,5 +1,5 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v15 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v16 ####
  * Coded by Ican Bachors 2014.
  * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
  * Updates will be posted to this site.
