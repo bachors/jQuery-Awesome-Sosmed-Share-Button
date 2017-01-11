@@ -302,7 +302,46 @@ $.fn.ayoshare = function(opt) {
 
 function ayo_share_og(c, s) {
     var e = new RegExp(location.host);
-    if (e.test(c)) {
+    if (window.location.href == c) {
+        var tit = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
+            des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
+            img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
+        if (s == 'facebook') {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'google') {
+            window.open('https://plus.google.com/share?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'linkedin') {
+            window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'reddit') {
+            window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'pinterest') {
+            window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'stumbleupon') {
+            window.open('http://www.stumbleupon.com/badge/?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'bufferapp') {
+            window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'vk') {
+            window.open('http://vk.com/share.php?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'pocket') {
+            window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'twitter') {
+            window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'digg') {
+            window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'whatsapp') {
+            window.location = 'whatsapp://send?text=' + tit + '%20' + c;
+        } else if (s == 'telegram') {
+            window.location = 'tg://msg_url?text=' + tit + '%20' + c;
+        } else if (s == 'viber') {
+            window.location = 'viber://forward?text=' + tit + '%20' + c;
+        } else if (s == 'email') {
+            window.location = 'mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c;
+        } else if (s == 'line') {
+            window.location = 'line://msg/text/' + tit + '%20' + c;
+        } else if (s == 'bbm') {
+            window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
+        }
+    } else if (e.test(c)) {
         $.ajax({
             url: c
         }).done(function(a) {
