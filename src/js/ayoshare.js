@@ -332,17 +332,17 @@ function ayo_share_og(c, s) {
             } else if (s == 'digg') {
                 window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
-                window.open('whatsapp://send?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
-                window.open('tg://msg_url?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'tg://msg_url?text=' + tit + '%20' + c;
             } else if (s == 'viber') {
-                window.open('viber://forward?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'viber://forward?text=' + tit + '%20' + c;
             } else if (s == 'email') {
-                window.open('mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c;
             } else if (s == 'line') {
-                window.open('line://msg/text/' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
-                window.open('bbmi://api/share?message=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
             }
         });
     } else {
@@ -383,17 +383,17 @@ function ayo_share_og(c, s) {
             } else if (s == 'digg') {
                 window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
-                window.open('whatsapp://send?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
-                window.open('tg://msg_url?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'tg://msg_url?text=' + tit + '%20' + c;
             } else if (s == 'viber') {
-                window.open('viber://forward?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'viber://forward?text=' + tit + '%20' + c;
             } else if (s == 'email') {
-                window.open('mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c;
             } else if (s == 'line') {
-                window.open('line://msg/text/' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
-                window.open('bbmi://api/share?message=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
             }
         }).fail(function() {
             var tit = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
@@ -422,17 +422,17 @@ function ayo_share_og(c, s) {
             } else if (s == 'digg') {
                 window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
-                window.open('whatsapp://send?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
-                window.open('tg://msg_url?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'tg://msg_url?text=' + tit + '%20' + c;
             } else if (s == 'viber') {
-                window.open('viber://forward?text=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'viber://forward?text=' + tit + '%20' + c;
             } else if (s == 'email') {
-                window.open('mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'mailto:?subject=' + tit + '&amp;body=' + des + '%20' + c;
             } else if (s == 'line') {
-                window.open('line://msg/text/' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
-                window.open('bbmi://api/share?message=' + tit + '%20' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
             }
         });
     }
