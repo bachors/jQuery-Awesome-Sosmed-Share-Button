@@ -21,6 +21,10 @@
     width: 98px
 }
 
+.ayoshare .button a {
+    cursor: pointer
+}
+
 .ayoshare .icon {
     display: block;
     float: left;
