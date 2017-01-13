@@ -169,7 +169,7 @@ $.fn.ayoshare = function(opt) {
 
     function ayo_pinterest(c, d, z) {
         $.ajax({
-            url: 'http://api.pinterest.com/v1/urls/count.json?url=' + encodeURIComponent(c) + '&callback=?',
+            url: 'https://api.pinterest.com/v1/urls/count.json?url=' + encodeURIComponent(c) + '&callback=?',
             crossDomain: true,
             dataType: 'json'
         }).done(function(a) {
@@ -205,7 +205,7 @@ $.fn.ayoshare = function(opt) {
 
     function ayo_reddit(d, e, z) {
         $.ajax({
-            url: 'http://www.reddit.com/api/info.json?url=' + encodeURIComponent(d),
+            url: 'https://www.reddit.com/api/info.json?url=' + encodeURIComponent(d),
             crossDomain: true,
             dataType: 'json'
         }).done(function(a) {
