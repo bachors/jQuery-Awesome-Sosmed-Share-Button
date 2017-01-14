@@ -7,23 +7,31 @@ Awesome Social Media Share Button With Share Count
 
 Options:
 <ul>
-			<li>google</li>
-			<li>stumbleupon</li>
-			<li>facebook</li>
-			<li>linkedin</li>
-			<li>pinterest</li>
-			<li>bufferapp</li>
-			<li>reddit</li>
-			<li>vk</li>
-			<li>pocket</li>
-			<li>twitter</li>
-			<li>digg</li>
-			<li>email</li>
-			<li>whatsapp</li>
-			<li>telegram</li>
-			<li>viber</li>
-			<li>line</li>
-			<li>bbm</li>
+			<li>Website. Appears in all devices
+				<ul>
+					<li>google</li>
+					<li>stumbleupon</li>
+					<li>facebook</li>
+					<li>linkedin</li>
+					<li>pinterest</li>
+					<li>bufferapp</li>
+					<li>reddit</li>
+					<li>vk</li>
+					<li>pocket</li>
+					<li>twitter</li>
+					<li>digg</li>
+					<li>email</li>
+				</ul>
+			</li>
+			<li>Mobile. Appears when opened using mobile
+				<ul>
+					<li>whatsapp</li>
+					<li>telegram</li>
+					<li>viber</li>
+					<li>line</li>
+					<li>bbm</li>
+				</ul>
+			</li>
 		</ul>
 Value option: <code>true</code>
 
