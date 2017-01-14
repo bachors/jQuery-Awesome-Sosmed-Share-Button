@@ -41,6 +41,7 @@ $.fn.ayoshare = function(opt) {
     opt.viber = (opt.viber == undefined ? defaultopt.viber : opt.viber);
     opt.line = (opt.line == undefined ? defaultopt.line : opt.line);
     opt.bbm = (opt.bbm == undefined ? defaultopt.bbm : opt.bbm);
+	var ua = navigator.userAgent;
     $(this).each(function(i, d) {
         var b = $(this).data('ayoshare'),
             html = '';
@@ -98,30 +99,32 @@ $.fn.ayoshare = function(opt) {
             html += '<div class="digg button"><a onclick="ayo_share_og(\'' + b + '\', \'digg\');" title="Digg">';
             html += '<i class="mobile"><i class="fa fa-digg"></i></i></a></div>'
         }
-        if (opt.whatsapp) {
-            html += '<div class="whatsapp button"><a onclick="ayo_share_og(\'' + b + '\', \'whatsapp\');" title="Whatsapp">';
-            html += '<i class="mobile"><i class="fa fa-whatsapp"></i></i></a></div>';
-        }
-        if (opt.telegram) {
-            html += '<div class="telegram button"><a onclick="ayo_share_og(\'' + b + '\', \'telegram\');" title="Telegram">';
-            html += '<i class="mobile"><i class="fa fa-paper-plane"></i></i></a></div>';
-        }
-        if (opt.viber) {
-            html += '<div class="viber button"><a onclick="ayo_share_og(\'' + b + '\', \'viber\');" title="Viber">';
-            html += '<i class="mobile"><i class="fa fa-volume-control-phone"></i></i></a></div>';
-        }
         if (opt.email) {
             html += '<div class="email button"><a onclick="ayo_share_og(\'' + b + '\', \'email\');" title="Email">';
             html += '<i class="mobile"><i class="fa fa-envelope"></i></i></a></div>';
         }
-        if (opt.line) {
-            html += '<div class="line button"><a onclick="ayo_share_og(\'' + b + '\', \'line\');" title="Line">';
-            html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>';
-        }
-        if (opt.bbm) {
-            html += '<div class="bbm button"><a onclick="ayo_share_og(\'' + b + '\', \'bbm\');" title="BBM">';
-            html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>';
-        }
+		if(ua.match(/mobile/i)){
+			if (opt.whatsapp) {
+				html += '<div class="whatsapp button"><a onclick="ayo_share_og(\'' + b + '\', \'whatsapp\');" title="Whatsapp">';
+				html += '<i class="mobile"><i class="fa fa-whatsapp"></i></i></a></div>';
+			}
+			if (opt.telegram) {
+				html += '<div class="telegram button"><a onclick="ayo_share_og(\'' + b + '\', \'telegram\');" title="Telegram">';
+				html += '<i class="mobile"><i class="fa fa-paper-plane"></i></i></a></div>';
+			}
+			if (opt.viber) {
+				html += '<div class="viber button"><a onclick="ayo_share_og(\'' + b + '\', \'viber\');" title="Viber">';
+				html += '<i class="mobile"><i class="fa fa-volume-control-phone"></i></i></a></div>';
+			}
+			if (opt.line) {
+				html += '<div class="line button"><a onclick="ayo_share_og(\'' + b + '\', \'line\');" title="Line">';
+				html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>';
+			}
+			if (opt.bbm) {
+				html += '<div class="bbm button"><a onclick="ayo_share_og(\'' + b + '\', \'bbm\');" title="BBM">';
+				html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>';
+			}
+		}
         $(this).html('<div class="ayoshare">' + html + '</div>');
     });
 
