@@ -6,27 +6,24 @@
   "scripts": {
     "test": "echo \"Pengujian dimulai... \n\" && jshint src/js/*.js && echo \" ✓ jshint src/js/*.js passed\n\" && jshint test/*.js && echo \" ✓ jshint test/*.js passed\n\" && mocha --timeout 20000 test/index.js && echo \" ✓ mocha --timeout 20000 test/index.js passed\n\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button.git"
-  },
+  "repository": "bachors/jQuery-Awesome-Sosmed-Share-Button",
   "author": "Ican Bachors",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button/issues"
   },
-  "homepage": "http://ibacor.com/labs/jquery-awesome-sosmed-share-button",
+  "homepage": "https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button",
   "dependencies": {
-    "chai": "^3.5.0",
-    "jquery": "^2.2.4",
-    "jsdom": "^9.2.1",
-    "mocha": "^2.5.3",
-    "mocha-jsdom": "^1.1.0",
-    "jshint": "^2.9.2",
-    "html-to-json": "^0.6.0"
-  },
-  "devDependencies": {
-    "pre-commit": "^1.1.3"
-  },
-  "pre-commit": ["test"]
+    "jquery": "^2.1.3",
+    "fontawesome": "^4.7.0"
+  }
+  "keywords": [
+    "shared",
+    "button",
+    "socialmedia",
+    "counter",
+    "like",
+    "og",
+    "plugin"
+  ],
 }
