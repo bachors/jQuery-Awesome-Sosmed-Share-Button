@@ -40,7 +40,7 @@ Value option: <code>true</code>
 
 <h2>Usage:</h2>
 CSS
-<pre>&lt;!-- Include Font Awesome v4.6.0 --&gt;
+<pre>&lt;!-- Include Font Awesome v4.7.0 --&gt;
 &lt;link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"&gt;
 
 &lt;!-- Custom Style --&gt;
