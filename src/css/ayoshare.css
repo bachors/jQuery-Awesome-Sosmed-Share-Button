@@ -162,6 +162,10 @@
 	background-color: #1E1E1E;
 }
 
+.ayoshare .sms .mobile {
+	background-color: #1FFF8F;
+}
+
 /* add hover and active effects */
 .ayoshare .button:hover .icon,
 .ayoshare .button:hover .counter,
