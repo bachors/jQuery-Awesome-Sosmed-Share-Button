@@ -1,0 +1,21 @@
+{
+  "name": "AyoShare.js",
+  "main": "src/js/ayoshare.js",
+  "homepage": "https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button",
+  "description": "Awesome Social Media Share Button With Share Counter.",
+  "keywords": [
+    "shared",
+    "button",
+    "socialmedia",
+    "counter",
+    "like",
+    "og",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test"
+  ]
+}
