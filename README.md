@@ -30,6 +30,7 @@ Options:
 			<li>viber</li>
 			<li>line</li>
 			<li>bbm</li>
+			<li>sms</li>
 		</ul>
 	</li>
 </ul>
@@ -72,7 +73,8 @@ JS
             telegram : true,
             line : true,
             bbm : true,
-            viber : true
+            viber : true,
+            sms : true
         });
         
         $("#unik").ayoshare({
@@ -86,7 +88,8 @@ JS
             pocket : true,
             twitter : true,
             digg : true,
-            telegram : true
+            telegram : true,
+            sms : true
         });
         
     });
