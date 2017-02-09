@@ -22,7 +22,8 @@ $.fn.ayoshare = function(opt) {
         telegram: false,
         viber: false,
         line: false,
-        bbm: false
+        bbm: false,
+        sms: false
     };
     opt.google = (opt.google == undefined ? defaultopt.google : opt.google);
     opt.stumbleupon = (opt.stumbleupon == undefined ? defaultopt.stumbleupon : opt.stumbleupon);
@@ -41,6 +42,7 @@ $.fn.ayoshare = function(opt) {
     opt.viber = (opt.viber == undefined ? defaultopt.viber : opt.viber);
     opt.line = (opt.line == undefined ? defaultopt.line : opt.line);
     opt.bbm = (opt.bbm == undefined ? defaultopt.bbm : opt.bbm);
+    opt.sms = (opt.sms == undefined ? defaultopt.sms : opt.sms);
 	var ua = navigator.userAgent;
     $(this).each(function(i, d) {
         var b = $(this).data('ayoshare'),
@@ -110,7 +112,7 @@ $.fn.ayoshare = function(opt) {
 			}
 			if (opt.telegram) {
 				html += '<div class="telegram button"><a onclick="ayo_share_og(\'' + b + '\', \'telegram\');" title="Telegram">';
-				html += '<i class="mobile"><i class="fa fa-paper-plane"></i></i></a></div>';
+				html += '<i class="mobile"><i class="fa fa-telegram"></i></i></a></div>';
 			}
 			if (opt.viber) {
 				html += '<div class="viber button"><a onclick="ayo_share_og(\'' + b + '\', \'viber\');" title="Viber">';
@@ -123,6 +125,10 @@ $.fn.ayoshare = function(opt) {
 			if (opt.bbm) {
 				html += '<div class="bbm button"><a onclick="ayo_share_og(\'' + b + '\', \'bbm\');" title="BBM">';
 				html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>';
+			}
+			if (opt.sms) {
+				html += '<div class="sms button"><a onclick="ayo_share_og(\'' + b + '\', \'sms\');" title="SMS">';
+				html += '<i class="mobile"><i class="fa fa-comment"></i></i></a></div>';
 			}
 		}
         $(this).html('<div class="ayoshare">' + html + '</div>');
@@ -343,6 +349,8 @@ function ayo_share_og(c, s) {
             window.location = 'line://msg/text/' + tit + '%20' + c;
         } else if (s == 'bbm') {
             window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
+        } else if (s == 'sms') {
+            window.location = 'sms:?body=' + tit + '%20' + c;
         }
     } else if (e.test(c)) {
         $.ajax({
@@ -385,7 +393,9 @@ function ayo_share_og(c, s) {
                 window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
                 window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
-            }
+            } else if (s == 'sms') {
+				window.location = 'sms:?body=' + tit + '%20' + c;
+			}
         });
     } else {
         $.ajax({
@@ -436,7 +446,9 @@ function ayo_share_og(c, s) {
                 window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
                 window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
-            }
+            } else if (s == 'sms') {
+				window.location = 'sms:?body=' + tit + '%20' + c;
+			}
         }).fail(function() {
             var tit = ($(document).attr('title') !== null && $(document).attr('title') !== undefined ? $(document).attr('title') : ''),
                 des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
@@ -475,7 +487,9 @@ function ayo_share_og(c, s) {
                 window.location = 'line://msg/text/' + tit + '%20' + c;
             } else if (s == 'bbm') {
                 window.location = 'bbmi://api/share?message=' + tit + '%20' + c;
-            }
+            } else if (s == 'sms') {
+				window.location = 'sms:?body=' + tit + '%20' + c;
+			}
         });
     }
 }
