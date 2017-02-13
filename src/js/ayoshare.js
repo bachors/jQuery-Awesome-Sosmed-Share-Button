@@ -198,7 +198,7 @@ $.fn.ayoshare = function(opt) {
             data: {
                 q: "SELECT content FROM data.headers WHERE url=\"http://vk.com/share.php?act=count&index=1&url=" + encodeURIComponent(f) + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
                 format: "xml",
-                env: "http://datatables.org/alltables.env"
+                env: "store://datatables.org/alltableswithkeys"
             }
         }).done(function(a) {
             var b = $(a).find("content").text();
@@ -235,7 +235,7 @@ $.fn.ayoshare = function(opt) {
             data: {
                 q: "SELECT content FROM data.headers WHERE url=\"https://plusone.google.com/_/+1/fastbutton?url=" + encodeURIComponent(e) + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
                 format: "xml",
-                env: "http://datatables.org/alltables.env"
+                env: "store://datatables.org/alltableswithkeys"
             }
         }).done(function(a) {
             var b = $(a).find("content").text();
@@ -256,7 +256,7 @@ $.fn.ayoshare = function(opt) {
             data: {
                 q: "SELECT content FROM data.headers WHERE url=\"http://www.stumbleupon.com/services/1.01/badge.getinfo?url=" + encodeURIComponent(e) + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
                 format: "xml",
-                env: "http://datatables.org/alltables.env"
+                env: "store://datatables.org/alltableswithkeys"
             }
         }).done(function(a) {
             var b = $(a).find("content").text();
@@ -277,7 +277,7 @@ $.fn.ayoshare = function(opt) {
             data: {
                 q: "SELECT content FROM data.headers WHERE url=\"https://widgets.getpocket.com/v1/button?label=pocket&count=horizontal&v=1&url=" + encodeURIComponent(e) + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
                 format: "xml",
-                env: "http://datatables.org/alltables.env"
+                env: "store://datatables.org/alltableswithkeys"
             }
         }).done(function(a) {
             var b = $(a).find("content").text();
@@ -405,7 +405,7 @@ function ayo_share_og(c, s) {
             data: {
                 q: "SELECT content FROM data.headers WHERE url=\"" + c + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
                 format: "xml",
-                env: "http://datatables.org/alltables.env"
+                env: "store://datatables.org/alltableswithkeys"
             }
         }).done(function(x) {
             var a = $(x).find("content").text(),
