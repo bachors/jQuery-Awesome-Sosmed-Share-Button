@@ -6,128 +6,168 @@
  *********************************************************************/
 $.fn.ayoshare = function(opt) {
     var defaultopt = {
-        google: false,
-        stumbleupon: false,
-        facebook: false,
-        linkedin: false,
-        pinterest: false,
-        bufferapp: false,
-        reddit: false,
-        vk: false,
-        pocket: false,
-        twitter: false,
-        digg: false,
-        email: false,
-        whatsapp: false,
-        telegram: false,
-        viber: false,
-        line: false,
-        bbm: false,
-        sms: false
+		counter: false,
+		button: {
+			google: false,
+			stumbleupon: false,
+			facebook: false,
+			linkedin: false,
+			pinterest: false,
+			bufferapp: false,
+			reddit: false,
+			vk: false,
+			pocket: false,
+			twitter: false,
+			digg: false,
+			email: false,
+			whatsapp: false,
+			telegram: false,
+			viber: false,
+			line: false,
+			bbm: false,
+			sms: false
+		}
     };
-    opt.google = (opt.google == undefined ? defaultopt.google : opt.google);
-    opt.stumbleupon = (opt.stumbleupon == undefined ? defaultopt.stumbleupon : opt.stumbleupon);
-    opt.facebook = (opt.facebook == undefined ? defaultopt.facebook : opt.facebook);
-    opt.linkedin = (opt.linkedin == undefined ? defaultopt.linkedin : opt.linkedin);
-    opt.pinterest = (opt.pinterest == undefined ? defaultopt.pinterest : opt.pinterest);
-    opt.bufferapp = (opt.bufferapp == undefined ? defaultopt.bufferapp : opt.bufferapp);
-    opt.reddit = (opt.reddit == undefined ? defaultopt.reddit : opt.reddit);
-    opt.vk = (opt.vk == undefined ? defaultopt.vk : opt.vk);
-    opt.pocket = (opt.pocket == undefined ? defaultopt.pocket : opt.pocket);
-    opt.twitter = (opt.twitter == undefined ? defaultopt.twitter : opt.twitter);
-    opt.digg = (opt.digg == undefined ? defaultopt.digg : opt.digg);
-    opt.email = (opt.email == undefined ? defaultopt.email : opt.email);
-    opt.whatsapp = (opt.whatsapp == undefined ? defaultopt.whatsapp : opt.whatsapp);
-    opt.telegram = (opt.telegram == undefined ? defaultopt.telegram : opt.telegram);
-    opt.viber = (opt.viber == undefined ? defaultopt.viber : opt.viber);
-    opt.line = (opt.line == undefined ? defaultopt.line : opt.line);
-    opt.bbm = (opt.bbm == undefined ? defaultopt.bbm : opt.bbm);
-    opt.sms = (opt.sms == undefined ? defaultopt.sms : opt.sms);
+    opt.counter = (opt.counter == undefined ? defaultopt.counter : opt.counter);
+    opt.button.google = (opt.button.google == undefined ? defaultopt.button.google : opt.button.google);
+    opt.button.stumbleupon = (opt.button.stumbleupon == undefined ? defaultopt.button.stumbleupon : opt.button.stumbleupon);
+    opt.button.facebook = (opt.button.facebook == undefined ? defaultopt.button.facebook : opt.button.facebook);
+    opt.button.linkedin = (opt.button.linkedin == undefined ? defaultopt.button.linkedin : opt.button.linkedin);
+    opt.button.pinterest = (opt.button.pinterest == undefined ? defaultopt.button.pinterest : opt.button.pinterest);
+    opt.button.bufferapp = (opt.button.bufferapp == undefined ? defaultopt.button.bufferapp : opt.button.bufferapp);
+    opt.button.reddit = (opt.button.reddit == undefined ? defaultopt.button.reddit : opt.button.reddit);
+    opt.button.vk = (opt.button.vk == undefined ? defaultopt.button.vk : opt.button.vk);
+    opt.button.pocket = (opt.button.pocket == undefined ? defaultopt.button.pocket : opt.button.pocket);
+    opt.button.twitter = (opt.button.twitter == undefined ? defaultopt.button.twitter : opt.button.twitter);
+    opt.button.digg = (opt.button.digg == undefined ? defaultopt.button.digg : opt.button.digg);
+    opt.button.email = (opt.button.email == undefined ? defaultopt.button.email : opt.button.email);
+    opt.button.whatsapp = (opt.button.whatsapp == undefined ? defaultopt.button.whatsapp : opt.button.whatsapp);
+    opt.button.telegram = (opt.button.telegram == undefined ? defaultopt.button.telegram : opt.button.telegram);
+    opt.button.viber = (opt.button.viber == undefined ? defaultopt.button.viber : opt.button.viber);
+    opt.button.line = (opt.button.line == undefined ? defaultopt.button.line : opt.button.line);
+    opt.button.bbm = (opt.button.bbm == undefined ? defaultopt.button.bbm : opt.button.bbm);
+    opt.button.sms = (opt.button.sms == undefined ? defaultopt.button.sms : opt.button.sms);
 	var ua = navigator.userAgent;
     $(this).each(function(i, d) {
         var b = $(this).data('ayoshare'),
             html = '';
         var c = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class'));
-        if (opt.facebook) {
-            html += '<div class="facebook button"><a onclick="ayo_share_og(\'' + b + '\', \'facebook\');" title="Facebook">';
-            html += '<i class="icon"><i class="fa fa-facebook"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_facebook(b, c, i);
+        if (opt.button.facebook) {
+			html += '<div class="facebook button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'facebook\');" title="Facebook">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-facebook"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_facebook(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-facebook"></i></i></a></div>';
+			}
         }
-        if (opt.google) {
-            html += '<div class="google button"><a onclick="ayo_share_og(\'' + b + '\', \'google\');" title="Google+">';
-            html += '<i class="icon"><i class="fa fa-google-plus"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_google(b, c, i);
+        if (opt.button.google) {
+			html += '<div class="google button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'google\');" title="Google+">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-google-plus"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_google(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-google-plus"></i></i></a></div>';
+			}
         }
-        if (opt.reddit) {
-            html += '<div class="reddit button"><a onclick="ayo_share_og(\'' + b + '\', \'reddit\');" title="Reddit">';
-            html += '<i class="icon"><i class="fa fa-reddit"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_reddit(b, c, i);
+        if (opt.button.reddit) {
+			html += '<div class="reddit button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'reddit\');" title="Reddit">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-reddit"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_reddit(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-reddit"></i></i></a></div>';
+			}
         }
-        if (opt.linkedin) {
-            html += '<div class="linkedin button"><a onclick="ayo_share_og(\'' + b + '\', \'linkedin\');" title="Linkedin">';
-            html += '<i class="icon"><i class="fa fa-linkedin"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_linkedin(b, c, i);
+        if (opt.button.linkedin) {
+			html += '<div class="linkedin button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'linkedin\');" title="Linkedin">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-linkedin"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_linkedin(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-linkedin"></i></i></a></div>';
+			}
         }
-        if (opt.pinterest) {
-            html += '<div class="pinterest button"><a onclick="ayo_share_og(\'' + b + '\', \'pinterest\');" title="Pinterest">';
-            html += '<i class="icon"><i class="fa fa-pinterest"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_pinterest(b, c, i);
+        if (opt.button.pinterest) {
+			html += '<div class="pinterest button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'pinterest\');" title="Pinterest">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-pinterest"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_pinterest(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-pinterest"></i></i></a></div>';
+			}
         }
-        if (opt.stumbleupon) {
-            html += '<div class="stumbleupon button"><a onclick="ayo_share_og(\'' + b + '\', \'stumbleupon\');" title="Stumbleupon">';
-            html += '<i class="icon"><i class="fa fa-stumbleupon"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_stumbleupon(b, c, i);
+        if (opt.button.stumbleupon) {
+			html += '<div class="stumbleupon button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'stumbleupon\');" title="Stumbleupon">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-stumbleupon"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_stumbleupon(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-stumbleupon"></i></i></a></div>';
+			}
         }
-        if (opt.bufferapp) {
-            html += '<div class="bufferapp button"><a onclick="ayo_share_og(\'' + b + '\', \'bufferapp\');" title="Bufferapp">';
-            html += '<i class="icon"><i class="fa fa-bufferapp"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_bufferapp(b, c, i);
+        if (opt.button.bufferapp) {
+			html += '<div class="bufferapp button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'bufferapp\');" title="Bufferapp">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-bufferapp"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_bufferapp(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-bufferapp"></i></i></a></div>';
+			}
         }
-        if (opt.vk) {
-            html += '<div class="vk button"><a onclick="ayo_share_og(\'' + b + '\', \'vk\');" title="VK">';
-            html += '<i class="icon"><i class="fa fa-vk"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_vk(b, c, i);
+        if (opt.button.vk) {
+			html += '<div class="vk button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'vk\');" title="VK">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-vk"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_vk(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-vk"></i></i></a></div>';
+			}
         }
-        if (opt.pocket) {
-            html += '<div class="pocket button"><a onclick="ayo_share_og(\'' + b + '\', \'pocket\');" title="Pocket">';
-            html += '<i class="icon"><i class="fa fa-get-pocket"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-            ayo_pocket(b, c, i);
+        if (opt.button.pocket) {
+			html += '<div class="pocket button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'pocket\');" title="Pocket">';
+			if(opt.counter){
+				html += '<i class="icon"><i class="fa fa-get-pocket"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
+				ayo_pocket(b, c, i);
+			}else{
+				html += '<i class="mobile"><i class="fa fa-get-pocket"></i></i></a></div>';
+			}
         }
-        if (opt.twitter) {
-            html += '<div class="twitter button"><a onclick="ayo_share_og(\'' + b + '\', \'twitter\');" title="Twitter">';
+        if (opt.button.twitter) {
+            html += '<div class="twitter button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'twitter\');" title="Twitter">';
             html += '<i class="mobile"><i class="fa fa-twitter"></i></i></a></div>';
         }
-        if (opt.digg) {
-            html += '<div class="digg button"><a onclick="ayo_share_og(\'' + b + '\', \'digg\');" title="Digg">';
+        if (opt.button.digg) {
+            html += '<div class="digg button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'digg\');" title="Digg">';
             html += '<i class="mobile"><i class="fa fa-digg"></i></i></a></div>'
         }
-        if (opt.email) {
-            html += '<div class="email button"><a onclick="ayo_share_og(\'' + b + '\', \'email\');" title="Email">';
+        if (opt.button.email) {
+            html += '<div class="email button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'email\');" title="Email">';
             html += '<i class="mobile"><i class="fa fa-envelope"></i></i></a></div>';
         }
 		if(ua.match(/mobile/i)){
-			if (opt.whatsapp) {
-				html += '<div class="whatsapp button"><a onclick="ayo_share_og(\'' + b + '\', \'whatsapp\');" title="Whatsapp">';
+			if (opt.button.whatsapp) {
+				html += '<div class="whatsapp button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'whatsapp\');" title="Whatsapp">';
 				html += '<i class="mobile"><i class="fa fa-whatsapp"></i></i></a></div>';
 			}
-			if (opt.telegram) {
-				html += '<div class="telegram button"><a onclick="ayo_share_og(\'' + b + '\', \'telegram\');" title="Telegram">';
+			if (opt.button.telegram) {
+				html += '<div class="telegram button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'telegram\');" title="Telegram">';
 				html += '<i class="mobile"><i class="fa fa-telegram"></i></i></a></div>';
 			}
-			if (opt.viber) {
-				html += '<div class="viber button"><a onclick="ayo_share_og(\'' + b + '\', \'viber\');" title="Viber">';
+			if (opt.button.viber) {
+				html += '<div class="viber button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'viber\');" title="Viber">';
 				html += '<i class="mobile"><i class="fa fa-volume-control-phone"></i></i></a></div>';
 			}
-			if (opt.line) {
-				html += '<div class="line button"><a onclick="ayo_share_og(\'' + b + '\', \'line\');" title="Line">';
+			if (opt.button.line) {
+				html += '<div class="line button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'line\');" title="Line">';
 				html += '<i class="mobile"><i class="fa fa-line"></i></i></a></div>';
 			}
-			if (opt.bbm) {
-				html += '<div class="bbm button"><a onclick="ayo_share_og(\'' + b + '\', \'bbm\');" title="BBM">';
+			if (opt.button.bbm) {
+				html += '<div class="bbm button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'bbm\');" title="BBM">';
 				html += '<i class="mobile"><i class="fa fa-bbm"></i></i></a></div>';
 			}
-			if (opt.sms) {
-				html += '<div class="sms button"><a onclick="ayo_share_og(\'' + b + '\', \'sms\');" title="SMS">';
+			if (opt.button.sms) {
+				html += '<div class="sms button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'sms\');" title="SMS">';
 				html += '<i class="mobile"><i class="fa fa-comment"></i></i></a></div>';
 			}
 		}
