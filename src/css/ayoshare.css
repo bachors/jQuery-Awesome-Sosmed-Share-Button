@@ -16,9 +16,13 @@
     display: block;
     float: left;
     height: 40px;
-    margin: 4px;
+    margin: 2px;
     overflow: hidden;
     width: 98px
+}
+
+.ayoshare .button.small {
+    width: 49px
 }
 
 .ayoshare .button a {
@@ -85,57 +89,66 @@
 	text-decoration:none;
 }
 
+.ayoshare .facebook .mobile,
 .ayoshare .facebook .icon,
 .ayoshare .facebook .counter {
-	background-color: #4769a5;
+	background-color: #7491C3;
 }
 
+.ayoshare .google .mobile,
 .ayoshare .google .icon,
 .ayoshare .google .counter {
-	background-color: #bf3727;
+	background-color: #DC6356;
 }
 
+.ayoshare .linkedin .mobile,
 .ayoshare .linkedin .icon,
 .ayoshare .linkedin .counter {
-	background-color: #2ba3e1;
+	background-color: #70C2EB;
 }
 
+.ayoshare .stumbleupon .mobile,
 .ayoshare .stumbleupon .icon,
 .ayoshare .stumbleupon .counter {
-	background-color: #eb4723;
+	background-color: #F1836A;
 }
 
+.ayoshare .bufferapp .mobile,
 .ayoshare .bufferapp .icon,
 .ayoshare .bufferapp .counter {
-	background-color: #323232;
+	background-color: #666666;
 }
 
+.ayoshare .reddit .mobile,
 .ayoshare .reddit .icon,
 .ayoshare .reddit .counter {
-	background-color: #2970FF;
+	background-color: #75A3FF;
 }
 
+.ayoshare .pinterest .mobile,
 .ayoshare .pinterest .icon,
 .ayoshare .pinterest .counter {
-	background-color: #cc2209;
+	background-color: #FF6161;
 }
 
+.ayoshare .vk .mobile,
 .ayoshare .vk .icon,
 .ayoshare .vk .counter {
-	background-color: #4c75a3;
+	background-color: #7B9CC1;
 }
 
+.ayoshare .pocket .mobile,
 .ayoshare .pocket .icon,
 .ayoshare .pocket .counter {
-	background-color: #e84352;
+	background-color: #F08992;
 }
 
 .ayoshare .twitter .mobile {
-	background-color: #51a3bf;
+	background-color: #88C0D3;
 }
 
 .ayoshare .digg .mobile {
-	background-color: #1b5891;
+	background-color: #4E99DF;
 }
 
 .ayoshare .email .mobile {
@@ -143,27 +156,27 @@
 }
 
 .ayoshare .whatsapp .mobile {
-	background-color: #4DC247;
+	background-color: #84D581;
 }
 
 .ayoshare .telegram .mobile {
-	background-color: #34ADE1;
+	background-color: #75C7EA;
 }
 
 .ayoshare .viber .mobile {
-	background-color: #7C529E;
+	background-color: #A17FBD;
 }
 
 .ayoshare .line .mobile {
-    background-color: #00B900;
+    background-color: #6BFF6B;
 }
 
 .ayoshare .bbm .mobile {
-	background-color: #1E1E1E;
+	background-color: #525252;
 }
 
 .ayoshare .sms .mobile {
-	background-color: #1FFF8F;
+	background-color: #38FF9C;
 }
 
 /* add hover and active effects */
