@@ -38,30 +38,39 @@
 		<h1 align="center">AyoShare.js v16</h1>
 		<p><b>Options:</b>
 		<ul>
-			<li>Website. Appears in all devices
+			<li>Counter
 				<ul>
-					<li>google</li>
-					<li>stumbleupon</li>
-					<li>facebook</li>
-					<li>linkedin</li>
-					<li>pinterest</li>
-					<li>bufferapp</li>
-					<li>reddit</li>
-					<li>vk</li>
-					<li>pocket</li>
-					<li>twitter</li>
-					<li>digg</li>
-					<li>email</li>
+					<li>Boolean
 				</ul>
 			</li>
-			<li>Mobile. Appears when opened using mobile
+			<li>Button
 				<ul>
-					<li>whatsapp</li>
-					<li>telegram</li>
-					<li>viber</li>
-					<li>line</li>
-					<li>bbm</li>
-					<li>sms</li>
+					<li>Website. Appears in all devices
+						<ul>
+							<li>google</li>
+							<li>stumbleupon</li>
+							<li>facebook</li>
+							<li>linkedin</li>
+							<li>pinterest</li>
+							<li>bufferapp</li>
+							<li>reddit</li>
+							<li>vk</li>
+							<li>pocket</li>
+							<li>twitter</li>
+							<li>digg</li>
+							<li>email</li>
+						</ul>
+					</li>
+					<li>Mobile. Appears when opened using mobile
+						<ul>
+							<li>whatsapp</li>
+							<li>telegram</li>
+							<li>viber</li>
+							<li>line</li>
+							<li>bbm</li>
+							<li>sms</li>
+						</ul>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -75,18 +84,21 @@
 &lt;script&gt;
     $(function() {
         $(".anu").ayoshare({
-            google : true,
-            facebook : true,
-            pinterest : true,
-            linkedin : true,
-            twitter : true,
-            email : true,
-            whatsapp : true,
-            telegram : true,
-            line : true,
-            bbm : true,
-            viber : true,
-            sms : true
+            counter: true,
+            button: {
+                google : true,
+                facebook : true,
+                pinterest : true,
+                linkedin : true,
+                twitter : true,
+                email : true,
+                whatsapp : true,
+                telegram : true,
+                line : true,
+                bbm : true,
+                viber : true,
+                sms : true
+            }
         });
     });
 &lt;/script&gt;</pre>	
@@ -97,18 +109,20 @@
 &lt;script&gt;
     $(function() {
         $("#unik").ayoshare({
-            google : true,
-            stumbleupon : true,
-            facebook : true,
-            pinterest : true,
-            bufferapp : true,
-            reddit : true,
-            vk : true,
-            pocket : true,
-            twitter : true,
-            digg : true,
-            telegram : true,
-            sms : true
+            button: {
+                google : true,
+                stumbleupon : true,
+                facebook : true,
+                pinterest : true,
+                bufferapp : true,
+                reddit : true,
+                vk : true,
+                pocket : true,
+                twitter : true,
+                digg : true,
+                telegram : true,
+                sms : true
+            }
         });
     });
 &lt;/script&gt;</pre>
@@ -116,36 +130,41 @@
 		<!-- Include jQuery -->
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<!-- jQuery Awesome Sosmed Share Button -->
-		<script src="js/ayoshare.min.js"></script>		
+		<script src="js/ayoshare.js"></script>		
 		<script>
 		$(function() {
 			$(".anu").ayoshare({
-				google : true,
-				facebook : true,
-				pinterest : true,
-				linkedin : true,
-				twitter : true,
-				email : true,
-				whatsapp : true,
-				telegram : true,
-				line : true,
-				bbm : true,
-				viber : true,
-				sms : true
+				counter: true,
+				button: {
+					google : true,
+					facebook : true,
+					pinterest : true,
+					linkedin : true,
+					twitter : true,
+					email : true,
+					whatsapp : true,
+					telegram : true,
+					line : true,
+					bbm : true,
+					viber : true,
+					sms : true
+				}
 			});
 			$("#unik").ayoshare({
-				google : true,
-				stumbleupon : true,
-				facebook : true,
-				pinterest : true,
-				bufferapp : true,
-				reddit : true,
-				vk : true,
-				pocket : true,
-				twitter : true,
-				digg : true,
-				telegram : true,
-				sms : true
+				button: {
+					google : true,
+					stumbleupon : true,
+					facebook : true,
+					pinterest : true,
+					bufferapp : true,
+					reddit : true,
+					vk : true,
+					pocket : true,
+					twitter : true,
+					digg : true,
+					telegram : true,
+					sms : true
+				}
 			});
 		});
 		</script>
