@@ -7,7 +7,10 @@ Awesome Social Media Share Button With Share Count
 
 Options:
 <ul>
-	<li>Website. Appears in all devices
+	<li>Counter: <code>boolean</code></li>
+	<li>Button: <code>boolean</code>
+	<ul>
+		<li>Website. Appears in all devices
 		<ul>
 			<li>google</li>
 			<li>stumbleupon</li>
@@ -22,8 +25,8 @@ Options:
 			<li>digg</li>
 			<li>email</li>
 		</ul>
-	</li>
-	<li>Mobile. Appears when opened using mobile
+		</li>
+		<li>Mobile. Appears when opened using mobile
 		<ul>
 			<li>whatsapp</li>
 			<li>telegram</li>
@@ -32,9 +35,10 @@ Options:
 			<li>bbm</li>
 			<li>sms</li>
 		</ul>
+		</li>
+	</ul>
 	</li>
 </ul>
-Value option: <code>true</code>
 
 <h3><a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button/tree/master/src">DOWNLOAD</a></h3>
 
@@ -63,33 +67,38 @@ JS
     $(function() {
     
         $(".anu").ayoshare({
-            google : true,
-            facebook : true,
-            pinterest : true,
-            linkedin : true,
-            twitter : true,
-            email : true,
-            whatsapp : true,
-            telegram : true,
-            line : true,
-            bbm : true,
-            viber : true,
-            sms : true
+            counter: true,
+            button: {
+                google : true,
+                facebook : true,
+                pinterest : true,
+                linkedin : true,
+                twitter : true,
+                email : true,
+                whatsapp : true,
+                telegram : true,
+                line : true,
+                bbm : true,
+                viber : true,
+                sms : true
+            }
         });
         
         $("#unik").ayoshare({
-            google : true,
-            stumbleupon : true,
-            facebook : true,
-            pinterest : true,
-            bufferapp : true,
-            reddit : true,
-            vk : true,
-            pocket : true,
-            twitter : true,
-            digg : true,
-            telegram : true,
-            sms : true
+            button: {
+                google : true,
+                stumbleupon : true,
+                facebook : true,
+                pinterest : true,
+                bufferapp : true,
+                reddit : true,
+                vk : true,
+                pocket : true,
+                twitter : true,
+                digg : true,
+                telegram : true,
+                sms : true
+            }
         });
         
     });
