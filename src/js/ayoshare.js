@@ -1,7 +1,7 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v16 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v17 ####
  * Coded by Ican Bachors 2014.
- * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
+ * https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button
  * Updates will be posted to this site.
  *********************************************************************/
 $.fn.ayoshare = function(opt) {
@@ -18,6 +18,7 @@ $.fn.ayoshare = function(opt) {
 			vk: false,
 			pocket: false,
 			twitter: false,
+			flipboard: false,
 			digg: false,
 			email: false,
 			whatsapp: false,
@@ -39,6 +40,7 @@ $.fn.ayoshare = function(opt) {
     opt.button.vk = (opt.button.vk == undefined ? defaultopt.button.vk : opt.button.vk);
     opt.button.pocket = (opt.button.pocket == undefined ? defaultopt.button.pocket : opt.button.pocket);
     opt.button.twitter = (opt.button.twitter == undefined ? defaultopt.button.twitter : opt.button.twitter);
+    opt.button.flipboard = (opt.button.flipboard == undefined ? defaultopt.button.flipboard : opt.button.flipboard);
     opt.button.digg = (opt.button.digg == undefined ? defaultopt.button.digg : opt.button.digg);
     opt.button.email = (opt.button.email == undefined ? defaultopt.button.email : opt.button.email);
     opt.button.whatsapp = (opt.button.whatsapp == undefined ? defaultopt.button.whatsapp : opt.button.whatsapp);
@@ -59,15 +61,6 @@ $.fn.ayoshare = function(opt) {
 				ayo_facebook(b, c, i);
 			}else{
 				html += '<i class="mobile"><i class="fa fa-facebook"></i></i></a></div>';
-			}
-        }
-        if (opt.button.google) {
-			html += '<div class="google button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'google\');" title="Google+">';
-			if(opt.counter){
-				html += '<i class="icon"><i class="fa fa-google-plus"></i></i><div class="counter"><p><i class="fa fa-spinner fa-spin"></i></p></div></a></div>';
-				ayo_google(b, c, i);
-			}else{
-				html += '<i class="mobile"><i class="fa fa-google-plus"></i></i></a></div>';
 			}
         }
         if (opt.button.reddit) {
@@ -133,9 +126,17 @@ $.fn.ayoshare = function(opt) {
 				html += '<i class="mobile"><i class="fa fa-get-pocket"></i></i></a></div>';
 			}
         }
+        if (opt.button.google) {
+            html += '<div class="google button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'google\');" title="Google+">';
+            html += '<i class="mobile"><i class="fa fa-google-plus"></i></i></a></div>';
+        }
         if (opt.button.twitter) {
             html += '<div class="twitter button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'twitter\');" title="Twitter">';
             html += '<i class="mobile"><i class="fa fa-twitter"></i></i></a></div>';
+        }
+        if (opt.button.flipboard) {
+            html += '<div class="flipboard button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'flipboard\');" title="Flipboard">';
+            html += '<i class="mobile"><i class="fa fa-flipboard"></i></i></a></div>'
         }
         if (opt.button.digg) {
             html += '<div class="digg button' + (opt.counter ? '' : ' small') + '"><a onclick="ayo_share_og(\'' + b + '\', \'digg\');" title="Digg">';
@@ -267,27 +268,6 @@ $.fn.ayoshare = function(opt) {
         })
     }
 
-    function ayo_google(e, f, z) {
-        $.ajax({
-            type: "GET",
-            dataType: "xml",
-            url: "https://query.yahooapis.com/v1/public/yql",
-            data: {
-                q: "SELECT content FROM data.headers WHERE url=\"https://plusone.google.com/_/+1/fastbutton?url=" + encodeURIComponent(e) + "\" and ua=\"#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36\"",
-                format: "xml",
-                env: "store://datatables.org/alltableswithkeys"
-            }
-        }).done(function(a) {
-            var b = $(a).find("content").text();
-            var c = b.match(/window\.__SSR[\s*]=[\s*]{c:[\s*](\d+)/i);
-            var d = (c !== null) ? ayo_num(c[1]) : 0;
-            $(f + ':eq(' + z + ') .ayoshare .google .counter p').html(d);
-        }).fail(function() {
-            $(f + ':eq(' + z + ') .ayoshare .google .counter p').html(0);
-
-        })
-    }
-
     function ayo_stumbleupon(e, f, z) {
         $.ajax({
             type: "GET",
@@ -356,27 +336,29 @@ function ayo_share_og(c, s) {
             des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
             img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
         if (s == 'facebook') {
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'google') {
-            window.open('https://plus.google.com/share?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://plus.google.com/share?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'linkedin') {
-            window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'reddit') {
-            window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'pinterest') {
-            window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'stumbleupon') {
-            window.open('http://www.stumbleupon.com/badge/?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('http://www.stumbleupon.com/badge/?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'bufferapp') {
-            window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'vk') {
-            window.open('http://vk.com/share.php?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('http://vk.com/share.php?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'pocket') {
-            window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'twitter') {
-            window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+        } else if (s == 'flipboard') {
+            window.open('https://share.flipboard.com/bookmarklet/popout?v=2&title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'digg') {
-            window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            window.open('http://digg.com/submit?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
         } else if (s == 'whatsapp') {
             window.location = 'whatsapp://send?text=' + tit + '%20' + c;
         } else if (s == 'telegram') {
@@ -400,27 +382,29 @@ function ayo_share_og(c, s) {
                 des = ($(a).filter('meta[name="description"]').attr("content") != null && $(a).filter('meta[name="description"]').attr("content") != undefined ? $(a).filter('meta[name="description"]').attr("content") : ''),
                 img = ($(a).filter('meta[property="og:image"]').attr("content") != null && $(a).filter('meta[property="og:image"]').attr("content") != undefined ? $(a).filter('meta[property="og:image"]').attr("content") : '');
             if (s == 'facebook') {
-                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'google') {
-                window.open('https://plus.google.com/share?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://plus.google.com/share?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'linkedin') {
-                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'reddit') {
-                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pinterest') {
-                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'stumbleupon') {
-                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'bufferapp') {
-                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'vk') {
-                window.open('http://vk.com/share.php?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://vk.com/share.php?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pocket') {
-                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'twitter') {
-                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
-            } else if (s == 'digg') {
-                window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            } else if (s == 'flipboard') {
+				window.open('https://share.flipboard.com/bookmarklet/popout?v=2&title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+			} else if (s == 'digg') {
+                window.open('http://digg.com/submit?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
                 window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
@@ -453,27 +437,29 @@ function ayo_share_og(c, s) {
                 des = ($(a).filter('meta[name="description"]').attr("content") != null && $(a).filter('meta[name="description"]').attr("content") != undefined ? $(a).filter('meta[name="description"]').attr("content") : ''),
                 img = ($(a).filter('meta[property="og:image"]').attr("content") != null && $(a).filter('meta[property="og:image"]').attr("content") != undefined ? $(a).filter('meta[property="og:image"]').attr("content") : '');
             if (s == 'facebook') {
-                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'google') {
-                window.open('https://plus.google.com/share?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://plus.google.com/share?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'linkedin') {
-                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'reddit') {
-                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pinterest') {
-                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'stumbleupon') {
-                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'bufferapp') {
-                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'vk') {
-                window.open('http://vk.com/share.php?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://vk.com/share.php?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pocket') {
-                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'twitter') {
-                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
-            } else if (s == 'digg') {
-                window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            } else if (s == 'flipboard') {
+				window.open('https://share.flipboard.com/bookmarklet/popout?v=2&title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+			} else if (s == 'digg') {
+                window.open('http://digg.com/submit?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
                 window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
@@ -494,27 +480,29 @@ function ayo_share_og(c, s) {
                 des = ($('meta[name="description"]').attr("content") != null && $('meta[name="description"]').attr("content") != undefined ? $('meta[name="description"]').attr("content") : ''),
                 img = ($('meta[property="og:image"]').attr("content") != null && $('meta[property="og:image"]').attr("content") != undefined ? $('meta[property="og:image"]').attr("content") : '');
             if (s == 'facebook') {
-                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'google') {
-                window.open('https://plus.google.com/share?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://plus.google.com/share?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'linkedin') {
-                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + c + '&title=' + tit + '&summary=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'reddit') {
-                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://reddit.com/submit?url=' + c + '&title=' + tit + '+-+via @bachors', 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pinterest') {
-                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://pinterest.com/pin/create/button/?url=' + c + '&media=' + img + '&description=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'stumbleupon') {
-                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://www.stumbleupon.com/badge/?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'bufferapp') {
-                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://bufferapp.com/add?url=' + c + '&text=' + des, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'vk') {
-                window.open('http://vk.com/share.php?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('http://vk.com/share.php?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'pocket') {
-                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://getpocket.com/save?title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'twitter') {
-                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
-            } else if (s == 'digg') {
-                window.open('http://digg.com/submit?url=' + c, 'ibacor.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+                window.open('https://twitter.com/share?text=' + tit + '+-+via @bachors&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+            } else if (s == 'flipboard') {
+				window.open('https://share.flipboard.com/bookmarklet/popout?v=2&title=' + tit + '&url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+			} else if (s == 'digg') {
+                window.open('http://digg.com/submit?url=' + c, 'bachors.com', 'width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
             } else if (s == 'whatsapp') {
                 window.location = 'whatsapp://send?text=' + tit + '%20' + c;
             } else if (s == 'telegram') {
