@@ -1,7 +1,7 @@
 /*********************************************************************
- * #### jQuery Awesome Sosmed Share Button / AyoShare.js v16 ####
+ * #### jQuery Awesome Sosmed Share Button / AyoShare.js v17 ####
  * Coded by Ican Bachors 2014.
- * http://ibacor.com/labs/jquery-awesome-sosmed-share-button/
+ * https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button
  * Updates will be posted to this site.
  *********************************************************************/
 
@@ -92,91 +92,93 @@
 .ayoshare .facebook .mobile,
 .ayoshare .facebook .icon,
 .ayoshare .facebook .counter {
-	background-color: #7491C3;
-}
-
-.ayoshare .google .mobile,
-.ayoshare .google .icon,
-.ayoshare .google .counter {
-	background-color: #DC6356;
+	background-color: rgb(59, 89, 152);
 }
 
 .ayoshare .linkedin .mobile,
 .ayoshare .linkedin .icon,
 .ayoshare .linkedin .counter {
-	background-color: #70C2EB;
+	background-color: #0074A1;
 }
 
 .ayoshare .stumbleupon .mobile,
 .ayoshare .stumbleupon .icon,
 .ayoshare .stumbleupon .counter {
-	background-color: #F1836A;
+	background-color: #EE4B13;
 }
 
 .ayoshare .bufferapp .mobile,
 .ayoshare .bufferapp .icon,
 .ayoshare .bufferapp .counter {
-	background-color: #666666;
+	background-color: #168eea;
 }
 
 .ayoshare .reddit .mobile,
 .ayoshare .reddit .icon,
 .ayoshare .reddit .counter {
-	background-color: #75A3FF;
+	background-color: #6D91A6;
 }
 
 .ayoshare .pinterest .mobile,
 .ayoshare .pinterest .icon,
 .ayoshare .pinterest .counter {
-	background-color: #FF6161;
+	background-color: #C92228;
 }
 
 .ayoshare .vk .mobile,
 .ayoshare .vk .icon,
 .ayoshare .vk .counter {
-	background-color: #7B9CC1;
+	background-color: #45668e;
 }
 
 .ayoshare .pocket .mobile,
 .ayoshare .pocket .icon,
 .ayoshare .pocket .counter {
-	background-color: #F08992;
+	background-color: #ef4056;
+}
+
+.ayoshare .google .mobile {
+	background-color: #D24231;
 }
 
 .ayoshare .twitter .mobile {
-	background-color: #88C0D3;
+	background-color: rgb(29, 161, 242);
 }
 
 .ayoshare .digg .mobile {
-	background-color: #4E99DF;
+	background-color: #005be2;
+}
+
+.ayoshare .flipboard .mobile {
+	background-color: #cc0000;
 }
 
 .ayoshare .email .mobile {
-	background-color: #888;
+	background-color: rgb(132, 132, 132);
 }
 
 .ayoshare .whatsapp .mobile {
-	background-color: #84D581;
+	background-color: #075e54;
 }
 
 .ayoshare .telegram .mobile {
-	background-color: #75C7EA;
+	background-color: #0088cc;
 }
 
 .ayoshare .viber .mobile {
-	background-color: #A17FBD;
+	background-color: #59267c;
 }
 
 .ayoshare .line .mobile {
-    background-color: #6BFF6B;
+    background-color: #00c300;
 }
 
 .ayoshare .bbm .mobile {
-	background-color: #525252;
+	background-color: #000000;
 }
 
 .ayoshare .sms .mobile {
-	background-color: #38FF9C;
+	background-color: #05FF82;
 }
 
 /* add hover and active effects */
@@ -210,6 +212,15 @@
 
 .ayoshare .fa-bbm {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAANJSURBVHja7JY9iF1FFMf/Z87M3K/dfb5lu6BCwEoUGwsLKxtFAkEELSwtVoSATVq/GgsLEcEuEFKkMYEQxaCIWAQMpFQERUQQlvWDt+t9b9+983GOxXvPWLi7vIchIHuaGbjM/O6c8/+fGVJV3IswuEdxAj4B37Wwh3347dffYdhUG4P1jw1xDaAFgQAACwfSfLzjSAWwliQGmeoZp7a1A7scuG7qF4vCvxZivNV1k3POFRDJMx4ZAApVBYhAIKgKiAxyiigr/65vypshxPcscOHf9qcjGshnOcupg4ODh0GEGBNyCmBmGMNQFeScwcxgtjDWQXIGQZFTwtrG+m1m3iXg2WVrzERIbD1UFTlFDIebP2xubiqzecL74vmtrS1tmuZGzgnWGMTQAwB8UYCATEdk9CiwqgJ96CGisM4h5/RpjOm6qv4hIvsp5c9jipfZ2geLwl+qquqVlDJUFUREq6qaAMCQmdUPOA1AY4pXc5bvmfnRlNLXXRcuWuYXiPBSURSvqspCbbSSqu/AFSoKX/gni6I4JyK/9F1/ua6rdwDYkMIXIvL+ZHJwfTqdfue9Azu3up0WIapgZuScr7Tt+KOU0gREW+PJ5JmU8u0saW/zvuEBEVUi+WxK+Zo1Bsdk+jjwTPI6k/9YVJGyYL2pt8uqfDtn+aZt20dSSh+IyLjvw1dVVcJai7lbaBUwATAqAucdoIKUMtgAfQg3RfFGzukGiBBCOB9jBDOjKAos5kSkS4ur7/tviWjLWfu4+cd/V2UJEL7s+umbCr3lLAMAnHOoqhIhREyn3WOqeqrv+x8PPdVhDWRnZwdlWT49HA4viMiVth2ft9Y+1TT1NoCdxbrZqAAIRCSqClV9ruv6l1OSa4PB2nLg3d1dqALO+wcGG+ufxJg+dN6/NRrtv26I1qw1NPfr32pQFfbeUdd1l8jYn70vsNaUy9XYuVnHYmPuN8ZUzPZsP20fWq8wGv3ZYTLJMPMaLOA5Z9T1DMTGrHYtqipEBFVdbUPR7O3tn/HejMqmxsZGBSKCtQxred6vZ3Nj+LjecfSJs2QQEUTkp1G7f1qB3hABkFleie7OfcyGQER1COGqqEyNIfyXL2E6eVefgP934L8GAFPbrYEFvuxUAAAAAElFTkSuQmCC"); /* BBM Logo */
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    margin: 3px 0 0 0;
+    padding: unset;
+}
+
+.ayoshare .fa-flipboard {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADjVADoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADWSURBVHja7NsxDoIwFAbgYhw4goOcgEM4cAjvy+AtYJGhoyOJQ12YHMDEJlb9/pWmTb7kvbw0pUopBQlhhwAECBAgQIAAAQIECBAgQIAAAQIECBAgyss+52bzPF+31tyGYcxx1qFtT8VCLDm++f2V9EpDjwABAgSIH5kjMqX/C4h7jFtLYtN1Z6WhR4AAAQIECAPVU6YQwqVEiCrnO8vlhmrt4mWq67pRGnoECBAgQIAwUK0MTV+Xyo8rSgMECBAgQIAAAQIECBAgQIAA8Zk8AAAA//8DAIUmH3yIYUyXAAAAAElFTkSuQmCC"); /* Flipboard Logo */
     background-size: cover;
     width: 32px;
     height: 32px;
