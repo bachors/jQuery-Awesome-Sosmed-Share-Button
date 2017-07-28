@@ -1,4 +1,4 @@
-AyoShare.js the new name of this plugin
+AyoShare.js
 =======================================
 
 Awesome Social Media Share Button With Share Count
@@ -22,6 +22,7 @@ Options:
 			<li>vk</li>
 			<li>pocket</li>
 			<li>twitter</li>
+			<li>flipboard</li>
 			<li>digg</li>
 			<li>email</li>
 		</ul>
@@ -39,8 +40,6 @@ Options:
 	</ul>
 	</li>
 </ul>
-
-<h3><a href="https://github.com/bachors/jQuery-Awesome-Sosmed-Share-Button/tree/master/src">DOWNLOAD</a></h3>
 
 <h2>Usage:</h2>
 CSS
@@ -74,6 +73,7 @@ JS
                 pinterest : true,
                 linkedin : true,
                 twitter : true,
+                flipboard : true,
                 email : true,
                 whatsapp : true,
                 telegram : true,
@@ -103,5 +103,3 @@ JS
         
     });
 &lt;/script&gt;</pre>
-
-<h3><a href="http://ibacor.com/demo/jquery-awesome-sosmed-share-button/">DEMO</a></h3>
